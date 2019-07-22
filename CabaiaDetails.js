@@ -15,5 +15,4 @@ if(["Point relais"].indexOf(checkoutjson.shipping_rate.title) !=-1)
     $( "div.map.default-background" ).before( IframeT );
     $( "div.map.default-background" ).replaceWith( iframe );
 }
-
 });
