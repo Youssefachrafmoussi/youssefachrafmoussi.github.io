@@ -1,22 +1,115 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+<style>.input-file-container {
+  position: relative;
+  width: 225px;
+} 
+.input-file-trigger {
+  display: block;
+  padding: 14px 45px;
+  background: #38220f;
+  color: #fff;
+  font-size: 1em;
+  transition: all .4s;
+  cursor: pointer;
+}
+ .input-file {
+  position: absolute;
+  top: 0; left: 0;
+  width: 225px;
+  opacity: 0;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.input-file:hover + .input-file-trigger,
+.input-file:focus + .input-file-trigger,
+.input-file-trigger:hover,
+.input-file-trigger:focus {
+  background: #634832;
+  color: #ffffff;
+}
+
+.file-return {
+  margin: 0;
+}
+.file-return:not(:empty) {
+  margin: 1em 0;
+}
+.file-return {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold;
+}
+.file-return:not(:empty):before {
+  content: "Selected file: ";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+
+
+
+
+/* Useless styles, just for demo styles */
+
+body {
+  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+  color: #7F8C9A;
+  background: #FCFDFD;
+}
+h1, h2 {
+  margin-bottom: 5px;
+  font-weight: normal;
+  text-align: center;
+  color:#634832;
+}
+h2 {
+  margin: 5px 0 2em;
+  color: #aaa;
+}
+form {
+  width: 225px;
+  margin: 0 auto;
+  text-align:center;
+}
+h2 + P {
+  text-align: center;
+}
+.txtcenter {
+  margin-top: 4em;
+  font-size: .9em;
+  text-align: center;
+  color: #aaa;
+}
+.copy {
+  margin-top: 2em;
+}
+.copy a {
+  text-decoration: none;
+  color: #1ABC9C;
+}</style>
 		
 </head>
 
 <body>
 
+<h1>TBTP Chauffeur</h1>
+<h2>pour TBTP SA</h2>
 
-<div class="section hero">
-    <div class="container">
-      <div class="row">
-        <div class="one-half column">
-          <h5 class="">Ad hoc distribution.</h6>
-          <a class="button button-primary" href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/wfbs6mm61fae02i/manifest.plist">Download TBTP Chauffeur</a>
-        </div>
-      </div>
-    </div>
-</div>
+<form action="#">
+  <div class="input-file-container">  
+	  <img src="https://dl.dropboxusercontent.com/s/glk22gvm541jfqq/Tbtpicon.png" alt="TBTP Chauffeur Icone" width="200"
+         height="200" style="border-radius: 20px">
+  <a  class="input-file-trigger" href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/wfbs6mm61fae02i/manifest.plist">Telecharger</a>
+  </div>
+  <p class="file-return"></p>
+</form>
+
+<p class="txtcenter">TBTP Chauffeur app for TBTP SA</p>
+<p class="txtcenter copy">by <a href="https://www.linkedin.com/in/youssef-achraf-moussi-070024164/">Moussi Youssef Achraf</a>
 
 </body>
 
