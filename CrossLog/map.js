@@ -1,4 +1,4 @@
-
+﻿
 jQuery(document).ready(function() {
     
     var ListPointRelais = jQuery("#crossListPointsRelais").text().split(",");
@@ -31,7 +31,7 @@ jQuery(document).ready(function() {
 
         if(jQuery("input[type=\'radio\'][value^='"+PointRelais+"']").is(':checked')) {
             var idVal = jQuery("input[type=\'radio\'][value^='"+PointRelais+"']").attr("id");
-            var Cart = '<div id="mapDiv" class="order_carrier_content box" style="border-top:0px;">Cliquez sur un des numéros disponibles ci-dessous.<br>Le point relais affiché est celui ou sera effectuée la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="430" src="https://tools.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE='+token+'&ID_CLIENT='+id_client+'&QUERY='+postcode+'+'+city+'&COUNTRY='+selectedCountry+'&COLOR='+couleur+'" frameborder="0"></iframe><div><br><br>'
+            var Cart = '<div id="mapDiv" class="order_carrier_content box" style="border-top:0px;">Cliquez sur un des numéros disponibles ci-dessous.<br>Le point relais affiché est celui ou sera effectuée la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="430" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE='+token+'&ID_CLIENT='+id_client+'&QUERY='+postcode+'+'+city+'&COUNTRY='+selectedCountry+'&COLOR='+couleur+'" frameborder="0"></iframe><div><br><br>'
             var parents = jQuery("#cross_Div_point_relais").text();
             var nbparents = parseInt(parents); 
             if(isNaN(nbparents))
