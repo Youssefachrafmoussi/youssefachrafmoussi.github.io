@@ -1,4 +1,4 @@
-﻿define(["jquery"], function($) {
+﻿require(["jquery"], function($) {
 
     var id_client = $("#CrossIdClient").text();
     var order_Id = $("#CrossOrderId").text();
