@@ -2,6 +2,7 @@
 jQuery(document).ready(function() {
     
     var ListPointRelais = jQuery("#crossListPointsRelais").text().split(",");
+    jQuery('#CrossLogToken').val(jQuery('#CrossLogTokenDiv').text());
     var arrayLength = ListPointRelais.length;
     var height = 430;
     try {
