@@ -11,7 +11,7 @@
 //  
 //  ////////////////////////////////////////////////////////////////////////////////////////////////
 
-var xlUrl = "https://tools.crossdesk.com";
+var xlUrl = "https://wscartography.crossdesk.com";
 var xlPptCarriers = "";
 $(document).ready(function() {
 if (xlCustomerId.xlCustomerId)
