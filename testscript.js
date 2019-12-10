@@ -1,5 +1,6 @@
 var custom = 0;
 var mapheight = 670;
+alert('test');
 window.addEventListener('load', function(){
 var id_client = jQuery("#CrossIdClient").text();
 var couleur = jQuery("#CrossColor").text();
