@@ -1,4 +1,4 @@
-$(window).on("load", function() {
+window.addEventListener('load', function(){
 
 var id_client = jQuery("#CrossIdClient").text();
 var couleur = jQuery("#CrossColor").text();
