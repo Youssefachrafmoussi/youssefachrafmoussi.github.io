@@ -24,7 +24,6 @@ for (var i = 0; i < arrayLength; i++) {
                         var nbparents = parseInt(parents);
                         if (isNaN(nbparents)){
                             nbparents = 0;
-                            alert('append');
                             jQuery(this).append(Cart);
                         }
                         else{
