@@ -16,8 +16,8 @@ for (var i = 0; i < arrayLength; i++) {
 
             jQuery('.shipping-method-item').each( function(i) {
                 if(jQuery(this).hasClass("current-shipping")){
+                    alert('yes');
                     if(jQuery(this).text().indexOf(PointRelais)>=0){
-                        alert('yes');
                         if(jQuery('#mapDiv').length){
                             jQuery('#mapDiv').remove();
                         }
