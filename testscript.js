@@ -71,8 +71,8 @@ for (var i = 0; i < arrayLength; i++) {
 function AdaptTheme(){
 
     var ClientGUID = $("#CrossIdClient").text();
-    ClientGUID ='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-    if (ClientGUID == 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') {
+    ClientGUID ='8f3d093b-3a54-11e3-acfb-d8d385e2f9ec';
+    if (ClientGUID == '8f3d093b-3a54-11e3-acfb-d8d385e2f9ec') {
         if (document.URL.indexOf("m.riuparis") == -1) {
             $(".sp-methods").css('overflow','scroll').css('height','600px');
             if($('.current-shipping').width()<700){
@@ -86,10 +86,10 @@ function AdaptTheme(){
 function CancelAdaptTheme(){
 
     var ClientGUID = $("#CrossIdClient").text();
-    ClientGUID ='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-    if (ClientGUID == 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') {
+    ClientGUID ='8f3d093b-3a54-11e3-acfb-d8d385e2f9ec';
+    if (ClientGUID == '8f3d093b-3a54-11e3-acfb-d8d385e2f9ec') {
         if (document.URL.indexOf("m.riuparis") == -1) {
-            $(".sp-methods").attr("style", "");;
+            $(".sp-methods").css('overflow','').css('height','');
         }
     }
 }
