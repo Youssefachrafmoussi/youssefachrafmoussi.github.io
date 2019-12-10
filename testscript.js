@@ -1,6 +1,5 @@
 var custom = 0;
 var mapheight = 670;
-alert('test');
 window.addEventListener('load', function(){
 var id_client = jQuery("#CrossIdClient").text();
 var couleur = jQuery("#CrossColor").text();
@@ -15,7 +14,7 @@ var arrayLength = ListPointRelais.length;
 for (var i = 0; i < arrayLength; i++) {
     var PointRelais = ListPointRelais[i];
             jQuery('.shipping-method-item').each( function(i) {
-                if(jQuery(this).find(".prettyradio > a.checked").length>0){
+                if(jQuery(this).hasClass("current-shipping")){
                     if(jQuery(this).text().indexOf(PointRelais)>=0){
                         if(jQuery('#mapDiv').length){
                             jQuery('#mapDiv').remove();
