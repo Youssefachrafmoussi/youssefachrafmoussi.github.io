@@ -9,12 +9,14 @@ var city = jQuery("#CrossCity").text();
 var postcode = jQuery("#CrossPC").text();
 var selectedCountry = jQuery("#CrossCountry").text();
 var token = jQuery("#CrossTokenDiv").text();
-alert(id_client);
 
-alert(token);
 var arrayLength = ListPointRelais.length;
+    alert(arrayLength);
+
 for (var i = 0; i < arrayLength; i++) {
     var PointRelais = ListPointRelais[i];
+    alert(PointRelais);
+
             jQuery('.shipping-method-item').each( function(i) {
                 if(jQuery(this).hasClass("current-shipping")){
                     if(jQuery(this).text().indexOf(PointRelais)>=0){
