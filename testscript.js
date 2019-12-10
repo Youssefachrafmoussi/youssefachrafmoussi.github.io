@@ -17,6 +17,7 @@ for (var i = 0; i < arrayLength; i++) {
             jQuery('.shipping-method-item').each( function(i) {
                 if(jQuery(this).hasClass("current-shipping")){
                     if(jQuery(this).text().indexOf(PointRelais)>=0){
+                        alert('yes');
                         if(jQuery('#mapDiv').length){
                             jQuery('#mapDiv').remove();
                         }
@@ -112,18 +113,18 @@ function GetCart(token, id_client, postcode, city, selectedCountry, couleur, cus
             if (res.length > 0) {
                 if (res[0] == PointRelais)
                 {
-                    Cart = '<div id="mapDiv"  style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&CARRIER=55" frameborder="0"></iframe><div>';
+                    Cart = '<div id="mapDiv"  style="border-top:0px;">Cliquez sur un des numéros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&CARRIER=55" frameborder="0"></iframe><div>';
                     if (couleur.length > 0) {
-                        Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&COLOR=' + couleur + '&CARRIER=55" frameborder="0"></iframe><div>';
+                        Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numéros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&COLOR=' + couleur + '&CARRIER=55" frameborder="0"></iframe><div>';
                     }
                 }
             }
         }
     }
     else{
-        Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '" frameborder="0"></iframe><div>';
+        Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numéros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '" frameborder="0"></iframe><div>';
         if (couleur.length > 0) {
-            Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&COLOR=' + couleur + '" frameborder="0"></iframe><div>';
+            Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numéros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&COLOR=' + couleur + '" frameborder="0"></iframe><div>';
         }
 
     }
