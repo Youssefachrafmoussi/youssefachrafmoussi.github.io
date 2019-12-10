@@ -13,7 +13,7 @@ var token = jQuery("#CrossTokenDiv").text();
 var arrayLength = ListPointRelais.length;
 for (var i = 0; i < arrayLength; i++) {
     var PointRelais = ListPointRelais[i];
-
+alert( jQuery('.shipping-method-item').length);
             jQuery('.shipping-method-item').each( function(i) {
                 if(jQuery(this).hasClass("current-shipping")){
                     alert('yes');
