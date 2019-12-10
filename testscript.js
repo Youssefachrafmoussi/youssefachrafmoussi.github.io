@@ -68,8 +68,8 @@ for (var i = 0; i < arrayLength; i++) {
 function AdaptTheme(){
 
     var ClientGUID = jQuery("#CrossIdClient").text();
-    ClientGUID ='8f3d093b-3a54-11e3-acfb-d8d385e2f9ec';
-    if (ClientGUID == '8f3d093b-3a54-11e3-acfb-d8d385e2f9ec') {
+    ClientGUID ='4ae89fbd-23b1-479f-b368-68bce6177454';
+    if (ClientGUID == '4ae89fbd-23b1-479f-b368-68bce6177454') {
         if (document.URL.indexOf("m.riuparis") == -1) {
             jQuery(".sp-methods").css('overflow','scroll').css('height','600px');
             if(jQuery('.current-shipping').width()<700){
@@ -82,8 +82,8 @@ function AdaptTheme(){
 }
 function CancelAdaptTheme(){
     var ClientGUID = jQuery("#CrossIdClient").text();
-    ClientGUID ='8f3d093b-3a54-11e3-acfb-d8d385e2f9ec';
-    if (ClientGUID == '8f3d093b-3a54-11e3-acfb-d8d385e2f9ec') {
+    ClientGUID ='4ae89fbd-23b1-479f-b368-68bce6177454';
+    if (ClientGUID == '4ae89fbd-23b1-479f-b368-68bce6177454') {
         if (document.URL.indexOf("m.riuparis") == -1) {
             jQuery(".sp-methods").css('overflow','').css('height','');
         }
