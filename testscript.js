@@ -41,13 +41,13 @@ for (var i = 0; i < arrayLength; i++) {
                 }
                 });
     jQuery(document).on('click', '.shipping-method-item' ,function(){
-                    alert('click');
                 if(jQuery(this).text().indexOf('Crosslog')>=0){
                     if(jQuery('#mapDiv').length){
                         jQuery('#mapDiv').remove();
                     }
                 AdaptTheme();
                 var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
+                alert(Cart);
                 var nbparents = parseInt(parents);
                 if (isNaN(nbparents)){
                     nbparents = 0;
