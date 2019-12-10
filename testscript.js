@@ -47,10 +47,11 @@ for (var i = 0; i < arrayLength; i++) {
                     }
                 AdaptTheme();
                 var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
-                alert(Cart);
                 var nbparents = parseInt(parents);
                 if (isNaN(nbparents)){
                     nbparents = 0;
+                    alert(jQuery(this));
+                                        alert(jQuery(this).text());
                     jQuery(this).append(Cart);
                 }
                 else{
