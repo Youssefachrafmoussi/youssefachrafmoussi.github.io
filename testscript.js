@@ -1,25 +1,25 @@
 jQuery(document).ready(function () {
 
-var id_client = $("#CrossIdClient").text();
-var couleur = $("#CrossColor").text();
-var ListPointRelais = $("#crossListPointsRelais").text().split(",");
-var parents = $("#cross_Div_point_relais").text();
-var customisation = $("#cross_Nom_du_fichier_script").text();
-var city = $("#CrossCity").text();
-var postcode = $("#CrossPC").text();
-var selectedCountry = $("#CrossCountry").text();
-var token = $("#CrossTokenDiv").text();
+var id_client = jQuery("#CrossIdClient").text();
+var couleur = jQuery("#CrossColor").text();
+var ListPointRelais = jQuery("#crossListPointsRelais").text().split(",");
+var parents = jQuery("#cross_Div_point_relais").text();
+var customisation = jQuery("#cross_Nom_du_fichier_script").text();
+var city = jQuery("#CrossCity").text();
+var postcode = jQuery("#CrossPC").text();
+var selectedCountry = jQuery("#CrossCountry").text();
+var token = jQuery("#CrossTokenDiv").text();
 alert(id_client);
 
 alert(token);
 var arrayLength = ListPointRelais.length;
 for (var i = 0; i < arrayLength; i++) {
     var PointRelais = ListPointRelais[i];
-            $('.shipping-method-item').each( function(i) {
-                if($(this).hasClass("current-shipping")){
-                    if($(this).text().indexOf(PointRelais)>=0){
-                        if($('#mapDiv').length){
-                            $('#mapDiv').remove();
+            jQuery('.shipping-method-item').each( function(i) {
+                if(jQuery(this).hasClass("current-shipping")){
+                    if(jQuery(this).text().indexOf(PointRelais)>=0){
+                        if(jQuery('#mapDiv').length){
+                            jQuery('#mapDiv').remove();
                         }
                         AdaptTheme();
                         var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
@@ -27,39 +27,39 @@ for (var i = 0; i < arrayLength; i++) {
     
                         if (isNaN(nbparents)){
                             nbparents = 0;
-                            $(this).append(Cart);
+                            jQuery(this).append(Cart);
                         }
                         else{
-                            GetHook($(this), nbparents).append(Cart);
+                            GetHook(jQuery(this), nbparents).append(Cart);
                         }
                     }
                     else{
-                        if($('#mapDiv').length){
-                            $('#mapDiv').remove();
+                        if(jQuery('#mapDiv').length){
+                            jQuery('#mapDiv').remove();
                         }
                         CancelAdaptTheme();
                     }
                 }
                 });
-                $('.shipping-method-item').click(function(){
-                if($(this).text().indexOf(PointRelais)>=0){
-                    if($('#mapDiv').length){
-                        $('#mapDiv').remove();
+                jQuery('.shipping-method-item').click(function(){
+                if(jQuery(this).text().indexOf(PointRelais)>=0){
+                    if(jQuery('#mapDiv').length){
+                        jQuery('#mapDiv').remove();
                     }
                 AdaptTheme();
                 var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
                 var nbparents = parseInt(parents);
                 if (isNaN(nbparents)){
                     nbparents = 0;
-                    $(this).append(Cart);
+                    jQuery(this).append(Cart);
                 }
                 else{
-                    GetHook($(this), nbparents).append(Cart);
+                    GetHook(jQuery(this), nbparents).append(Cart);
                 }
                 }
                 else{
-                    if($('#mapDiv').length){
-                        $('#mapDiv').remove();
+                    if(jQuery('#mapDiv').length){
+                        jQuery('#mapDiv').remove();
                     }
                     CancelAdaptTheme();
                 }
@@ -71,12 +71,12 @@ for (var i = 0; i < arrayLength; i++) {
 
 function AdaptTheme(){
 
-    var ClientGUID = $("#CrossIdClient").text();
+    var ClientGUID = jQuery("#CrossIdClient").text();
     ClientGUID ='8f3d093b-3a54-11e3-acfb-d8d385e2f9ec';
     if (ClientGUID == '8f3d093b-3a54-11e3-acfb-d8d385e2f9ec') {
         if (document.URL.indexOf("m.riuparis") == -1) {
-            $(".sp-methods").css('overflow','scroll').css('height','600px');
-            if($('.current-shipping').width()<700){
+            jQuery(".sp-methods").css('overflow','scroll').css('height','600px');
+            if(jQuery('.current-shipping').width()<700){
                 mapheight = 670;
             }else{
                 mapheight = 430;
@@ -86,11 +86,11 @@ function AdaptTheme(){
 }
 function CancelAdaptTheme(){
 
-    var ClientGUID = $("#CrossIdClient").text();
+    var ClientGUID = jQuery("#CrossIdClient").text();
     ClientGUID ='8f3d093b-3a54-11e3-acfb-d8d385e2f9ec';
     if (ClientGUID == '8f3d093b-3a54-11e3-acfb-d8d385e2f9ec') {
         if (document.URL.indexOf("m.riuparis") == -1) {
-            $(".sp-methods").css('overflow','').css('height','');
+            jQuery(".sp-methods").css('overflow','').css('height','');
         }
     }
 }
