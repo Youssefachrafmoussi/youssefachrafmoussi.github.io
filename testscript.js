@@ -1,90 +1,131 @@
-define([
-    'jquery',
-    'ko',
-    'uiComponent',
-    'Magento_Checkout/js/model/quote',
-    'domReady'
-], function ($, ko, Component, quote) {
-    'use strict';
-    return Component.extend({
-        defaults: {
-            template: 'Crosslog_Pointrelais/view/checkout/shipping/CartCrosslog'
-        },
-        initObservable: function () {
-            this.selectedMethod = ko.computed(function () {
-                var method = quote.shippingMethod();
-                var selectedMethod = method != null ? method.method_code : null;
-                return selectedMethod;
-            }, this);
-            return this;
-        },
-        getFrame: function () {
-            var address = quote.shippingAddress();
-            var zipcode = (address.postcode);
-            var city = (address.city);
-            var countryid = (address.countryId);
-            var idClient = window.checkoutConfig.clientId.clientId;
-            var objet = window.checkoutConfig.point.relais ;
-            var shippingmethods = [];
+jQuery(document).ready(function () {
 
-            for (var key in objet) {
-                var x = objet[key];
-                shippingmethods.push(x);
+var id_client = $("#CrossIdClient").text();
+var couleur = $("#CrossColor").text();
+var ListPointRelais = $("#crossListPointsRelais").text().split(",");
+var parents = $("#cross_Div_point_relais").text();
+var customisation = $("#cross_Nom_du_fichier_script").text();
+var city = $("#CrossCity").text();
+var postcode = $("#CrossPC").text();
+var selectedCountry = $("#CrossCountry").text();
+var token = $("#CrossTokenDiv").text();
 
-              }
-            //var idCommande = 'TestToken2';
-            var idCommande = $('#crossQuote').text();
-            var method = quote.shippingMethod();
-            var selectedMethodcode = method != null ? method.method_code : null;
-            var selectedCarriercode = method != null ? method.carrier_code : null;
 
-            var frame = "";
-
-                var selectedMethod = selectedCarriercode+"_"+ selectedMethodcode ;
-                var indexship = shippingmethods.indexOf(selectedMethod);
-                var nbrparents = Number(window.checkoutConfig.nbrparents.nbrparents);
-                var couleur = window.checkoutConfig.couleur.couleur;
-                if(!couleur){
-                    couleur='d23c7c';
-                }
-                frame = `<div id='mapDiv' class='order_carrier_content box' style='border-top:0px;'> 
-                Cliquez sur l'un des numéros disponibles ci-dessous.<br>Le point relais affiché est celui ou sera effectuée la livraison.<br><br>
-                <iframe  style='border:1px solid #CCCCCC;' id="CrossMap" title="Inline Frame Example" width="100%" height="430" src="http://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=${idCommande}&ID_CLIENT=${idClient}&QUERY=${zipcode}+${city}&COUNTRY=${countryid}&Color=${couleur}">
-                frameborder="0">
-                </iframe>
-                <div><br><br>`;
-                
-                if ($(`#mapDiv`).length)
-                    $(`#mapDiv`).remove();
-                if (indexship != -1) {
-                var checkExist = setInterval(function () {
-                    if ($("#mapDiv").length == 0) {
-
-                        if(nbrparents)
-                            {
-                            jQuery(".radio[value='"+selectedMethod+"']").parents().eq(nbrparents).after(frame);
-                            if ($("#mapDiv").length != 0) {
-                                clearInterval(checkExist);}
-                            }
+var arrayLength = ListPointRelais.length;
+for (var i = 0; i < arrayLength; i++) {
+    var PointRelais = ListPointRelais[i];
+            $('.shipping-method-item').each( function(i) {
+                if($(this).hasClass("current-shipping")){
+                    if($(this).text().indexOf(PointRelais)>=0){
+                        if($('#mapDiv').length){
+                            $('#mapDiv').remove();
+                        }
+                        AdaptTheme();
+                        var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
+                        var nbparents = parseInt(parents);
+    
+                        if (isNaN(nbparents)){
+                            nbparents = 0;
+                            $(this).append(Cart);
+                        }
                         else{
-                            clearInterval(checkExist);
+                            GetHook($(this), nbparents).append(Cart);
                         }
                     }
-                }, 100);
-            }
-        if(window.checkoutConfig.lienDuFichierScript.lienDuFichierScript)
-            {
-                jQuery("head").append('<script type="text/javascript" src="' + window.checkoutConfig.lienDuFichierScript.lienDuFichierScript + '"></script>');
-            }
-        if(nbrparents)
-        return "";
-        else if(!nbrparents && indexship != -1)
-        {
-            return frame;
+                    else{
+                        if($('#mapDiv').length){
+                            $('#mapDiv').remove();
+                        }
+                        CancelAdaptTheme();
+                    }
+                }
+                });
+                $('.shipping-method-item').click(function(){
+                if($(this).text().indexOf(PointRelais)>=0){
+                    if($('#mapDiv').length){
+                        $('#mapDiv').remove();
+                    }
+                AdaptTheme();
+                var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
+                var nbparents = parseInt(parents);
+                if (isNaN(nbparents)){
+                    nbparents = 0;
+                    $(this).append(Cart);
+                }
+                else{
+                    GetHook($(this), nbparents).append(Cart);
+                }
+                }
+                else{
+                    if($('#mapDiv').length){
+                        $('#mapDiv').remove();
+                    }
+                    CancelAdaptTheme();
+                }
+                }); 
 
-        }
-
-        },
-    });
+}
 });
 
+
+function AdaptTheme(){
+
+    var ClientGUID = $("#CrossIdClient").text();
+    ClientGUID ='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+    if (ClientGUID == 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') {
+        if (document.URL.indexOf("m.riuparis") == -1) {
+            $(".sp-methods").css('overflow','scroll').css('height','600px');
+            if($('.current-shipping').width()<700){
+                mapheight = 670;
+            }else{
+                mapheight = 430;
+            }
+        }
+    }
+}
+function CancelAdaptTheme(){
+
+    var ClientGUID = $("#CrossIdClient").text();
+    ClientGUID ='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+    if (ClientGUID == 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') {
+        if (document.URL.indexOf("m.riuparis") == -1) {
+            $(".sp-methods").attr("style", "");;
+        }
+    }
+}
+function GetHook(element, nbparents) {
+
+    var hook = element.parents().eq(nbparents);
+    return hook;
+}
+var custom = 0;
+var mapheight = 670;
+function GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais) {
+
+    var Cart = '';
+    if (custom == 1) {
+        var ClientGUID = jQuery("#CrossIdClient").text();
+        if (ClientGUID == 'NOTYET') {
+            var str = customisation;
+            var res = str.split(",");
+            if (res.length > 0) {
+                if (res[0] == PointRelais)
+                {
+                    Cart = '<div id="mapDiv"  style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&CARRIER=55" frameborder="0"></iframe><div>';
+                    if (couleur.length > 0) {
+                        Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&COLOR=' + couleur + '&CARRIER=55" frameborder="0"></iframe><div>';
+                    }
+                }
+            }
+        }
+    }
+    else{
+        Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '" frameborder="0"></iframe><div>';
+        if (couleur.length > 0) {
+            Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&COLOR=' + couleur + '" frameborder="0"></iframe><div>';
+        }
+
+    }
+    return Cart;
+
+}
