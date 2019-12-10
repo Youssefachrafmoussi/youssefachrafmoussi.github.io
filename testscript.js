@@ -9,8 +9,9 @@ var city = $("#CrossCity").text();
 var postcode = $("#CrossPC").text();
 var selectedCountry = $("#CrossCountry").text();
 var token = $("#CrossTokenDiv").text();
+alert(id_client);
 
-
+alert(token);
 var arrayLength = ListPointRelais.length;
 for (var i = 0; i < arrayLength; i++) {
     var PointRelais = ListPointRelais[i];
