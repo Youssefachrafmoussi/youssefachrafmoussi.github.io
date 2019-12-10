@@ -15,8 +15,9 @@ for (var i = 0; i < arrayLength; i++) {
     var PointRelais = ListPointRelais[i];
 alert( jQuery('.shipping-method-item').length);
             jQuery('.shipping-method-item').each( function(i) {
+               alert(jQuery(this).attr("class"));
+
                 if(jQuery(this).hasClass("current-shipping")){
-                    alert('yes');
                     if(jQuery(this).text().indexOf(PointRelais)>=0){
                         if(jQuery('#mapDiv').length){
                             jQuery('#mapDiv').remove();
