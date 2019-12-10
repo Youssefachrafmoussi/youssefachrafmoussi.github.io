@@ -42,7 +42,7 @@ for (var i = 0; i < arrayLength; i++) {
                 }
                 });
                 jQuery('.shipping-method-item').click(function(){
-                if(jQuery(this).text().indexOf(PointRelais)>=0){
+                if(jQuery(this).text().indexOf('Crosslog')>=0){
                     if(jQuery('#mapDiv').length){
                         jQuery('#mapDiv').remove();
                     }
