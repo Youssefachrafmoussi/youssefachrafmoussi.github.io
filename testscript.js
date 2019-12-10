@@ -11,13 +11,12 @@ var selectedCountry = jQuery("#CrossCountry").text();
 var token = jQuery("#CrossTokenDiv").text();
 
 var arrayLength = ListPointRelais.length;
-    alert(arrayLength);
-
 for (var i = 0; i < arrayLength; i++) {
     var PointRelais = ListPointRelais[i];
-    alert(PointRelais);
 
             jQuery('.shipping-method-item').each( function(i) {
+                    alert(jQuery(this).text());
+
                 if(jQuery(this).hasClass("current-shipping")){
                     if(jQuery(this).text().indexOf(PointRelais)>=0){
                         if(jQuery('#mapDiv').length){
