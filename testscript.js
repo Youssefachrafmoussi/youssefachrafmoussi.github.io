@@ -15,8 +15,6 @@ for (var i = 0; i < arrayLength; i++) {
     var PointRelais = ListPointRelais[i];
 
             jQuery('.shipping-method-item').each( function(i) {
-                    alert(jQuery(this).text());
-
                 if(jQuery(this).hasClass("current-shipping")){
                     if(jQuery(this).text().indexOf(PointRelais)>=0){
                         if(jQuery('#mapDiv').length){
@@ -42,7 +40,7 @@ for (var i = 0; i < arrayLength; i++) {
                     }
                 }
                 });
-                jQuery('.shipping-method-item').click(function(){
+    jQuery(document).on('click', jQuery('.shipping-method-item') ,function(){
                     alert('click');
                 if(jQuery(this).text().indexOf('Crosslog')>=0){
                     if(jQuery('#mapDiv').length){
@@ -65,8 +63,7 @@ for (var i = 0; i < arrayLength; i++) {
                     }
                     CancelAdaptTheme();
                 }
-                }); 
-
+                });
 }
 });
 
