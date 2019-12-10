@@ -42,6 +42,7 @@ for (var i = 0; i < arrayLength; i++) {
                 }
                 });
                 jQuery('.shipping-method-item').click(function(){
+                    alert('click');
                 if(jQuery(this).text().indexOf('Crosslog')>=0){
                     if(jQuery('#mapDiv').length){
                         jQuery('#mapDiv').remove();
