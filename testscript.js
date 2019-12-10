@@ -40,7 +40,7 @@ for (var i = 0; i < arrayLength; i++) {
                     }
                 }
                 });
-    jQuery(document).on('click', jQuery('.shipping-method-item') ,function(){
+    jQuery(document).on('click', '.shipping-method-item' ,function(){
                     alert('click');
                 if(jQuery(this).text().indexOf('Crosslog')>=0){
                     if(jQuery('#mapDiv').length){
