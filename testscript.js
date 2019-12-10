@@ -24,6 +24,7 @@ for (var i = 0; i < arrayLength; i++) {
                         var nbparents = parseInt(parents);
                         if (isNaN(nbparents)){
                             nbparents = 0;
+                            alert('append');
                             jQuery(this).append(Cart);
                         }
                         else{
@@ -38,31 +39,31 @@ for (var i = 0; i < arrayLength; i++) {
                     }
                 }
                 });
-    jQuery(document).on('click', '.shipping-method-item' ,function(){
-                token = jQuery("#CrossTokenDiv").text();
-                if(jQuery(this).text().indexOf('Crosslog')>=0){
-                    if(jQuery('#mapDiv').length){
-                        jQuery('#mapDiv').remove();
-                    }
-                AdaptTheme();
-                var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
-                var nbparents = parseInt(parents);
-                if (isNaN(nbparents)){
-                    nbparents = 0;
-                    jQuery(this).append(Cart);
-                }
-                else{
-                    GetHook(jQuery(this), nbparents).append(Cart);
-                }
-                }
-                else{
-                    if(jQuery('#mapDiv').length){
-                        jQuery('#mapDiv').remove();
-                    }
-                    CancelAdaptTheme();
-                }
-                });
 }
+jQuery(document).on('click', '.shipping-method-item' ,function(){
+    token = jQuery("#CrossTokenDiv").text();
+    if(jQuery(this).text().indexOf(ListPointRelais[0])>=0){
+        if(jQuery('#mapDiv').length){
+            jQuery('#mapDiv').remove();
+        }
+    AdaptTheme();
+    var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
+    var nbparents = parseInt(parents);
+    if (isNaN(nbparents)){
+        nbparents = 0;
+        jQuery(this).append(Cart);
+    }
+    else{
+        GetHook(jQuery(this), nbparents).append(Cart);
+    }
+    }
+    else{
+        if(jQuery('#mapDiv').length){
+            jQuery('#mapDiv').remove();
+        }
+        CancelAdaptTheme();
+    }
+    });
 });
 
 
