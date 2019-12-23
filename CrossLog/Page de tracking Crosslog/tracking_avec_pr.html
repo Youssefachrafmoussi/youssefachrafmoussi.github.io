@@ -194,6 +194,10 @@
     margin: 0 0;
     width : 100%;
 }
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: rgba(232, 219, 233, 0.219);
+ }
   </style>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
@@ -232,7 +236,7 @@
             <hr class="Darkhr MobileSeparator">
             <div class="mdl-card__supporting-text" style="color: #000000; margin: 0 auto;">
               <div class="table-responsive-md">
-                <table class="table">
+                <table class="table table-striped">
                   <tbody>
                     <tr>
                       <td style="width: 35%; font-weight: bold;" >Num. Commande</td>
@@ -267,7 +271,7 @@
             <hr class="Darkhr MobileSeparator">
             <div class="mdl-card__supporting-text" style="color: #000000; margin: 0 auto;">
               <div class="table-responsive-md">
-                <table class="table">
+                <table class="table table-striped">
                   <tbody>
                     <tr>
                       <td style="font-weight: bold;">N° Tracking</td>
@@ -458,19 +462,11 @@
             <hr class="Darkhr MobileSeparator">
             <div class="mdl-card__supporting-text" style="color: #000000; margin: 0 auto; width: 95%; padding-right: 0px; padding-left: 0px;">
               <div class="table-responsive-md">
-                <table class="table">
+                <table class="table table-striped">
                   <tbody>
                     <tr>
-                      <td style="font-weight: bold;">Adresse</td>
-                      <td>ERAM RUE DE LA FONTAINE, 27 53600 EVRON France</td>
-                    </tr>
-                    <tr>
-                      <td style="font-weight: bold;">Téléphone</td>
-                      <td>06xxxxxxxx</td>
-                    </tr>
-                    <tr>
-                      <td style="width: 35% ; font-weight: bold;">Email</td>
-                      <td>client@gmail.com</td>
+                      <td style="width: 35%; font-weight: bold;">Client</td>
+                      <td>Mr.X</td>
                     </tr>
                   </tbody>
                 </table>
