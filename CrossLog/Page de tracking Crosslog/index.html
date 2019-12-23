@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Material Portfolio Template Demo</title>
+  <meta name="description" content="Demo of Material design portfolio template by TemplateFlip.com." />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="styles/material.indigo-pink.min.css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+  
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:300,400&display=swap">
+
+  <link rel="stylesheet" href="styles/progress-tracker.css">
+
+
+  <style>
+.progress-marker::before{
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+.progress-step.is-active .progress-marker::before{
+  font-family: FontAwesome;
+  content: "\f00c";
+  background-color: #b400ab;
+}
+.progress-step.is-complete .progress-marker::before  {
+  font-family: FontAwesome;
+  content: "\f00c";
+  background-color: #b400ab;
+}
+.progress-step:hover .progress-marker::before {
+  background-color: #4c7589;
+}
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+
+    }
+
+    html {
+      height: 100%
+    }
+
+    p {
+      color: grey
+    }
+
+    #heading {
+      text-transform: uppercase;
+      color: #673AB7;
+      font-weight: normal
+    }
+
+    .card {
+      z-index: 0;
+      border: none;
+      position: relative
+    }
+
+
+    @media (max-width: 479px) {
+
+
+      .nomarginsunderme {
+        margin-bottom: -4px;
+        -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .14), -2px 2px 3px rgba(0, 0, 0, .12);
+        -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, .14), -2px 2px 3px rgba(0, 0, 0, .12);
+        box-shadow: 2px -2px 3px rgba(0, 0, 0, .14), -2px -2px 3px rgba(0, 0, 0, .12);
+      }
+
+      .nomarginsaboveme {
+        margin-top: 0px;
+        -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .14), -2px 2px 3px rgba(0, 0, 0, .12);
+        -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, .14), -2px 2px 3px rgba(0, 0, 0, .12);
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, .14), -2px 2px 3px rgba(0, 0, 0, .12);
+      }
+      .ProgressSupportCard{
+        width : 30%;
+      }
+
+    .fheaders {
+      font-size: 15vw;
+    }
+    .MobileSeparator{
+      visibility:visible;
+    }
+    .LightMobileSeparator{
+      visibility:visible;
+    }
+    .DesktopSeparator{
+      visibility:hidden;
+    }
+    }
+    .ProgressSupportCard{
+        width : 30%;
+      }
+
+    @media(min-width: 480px){
+      .fheaders {
+      font-size: 3vw;
+    }
+    .MobileSeparator{
+      visibility: hidden;
+    }
+    .DesktopSeparator{
+      visibility: visible;
+    }
+    .LightMobileSeparator{
+      visibility: hidden;
+    }
+      tr{
+        line-height: 25px;
+   min-height: 25px;
+   height: 25px;
+      }
+
+    }
+    /* Variables */
+    /* Base */
+    body {
+      background: #252827;
+      font-size: 16px;
+    }
+
+    p {
+      font-weight: 300;
+    }
+    a {
+      color: #ffffff;
+    }
+
+    a:hover {
+      color: #9d3e9d;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      letter-spacing: 1.5px;
+      color: black;
+      font-weight: 400;
+      font-size: 2.4em;
+    }
+
+    h3 {
+      color: black;
+    }
+
+
+    .h2style {
+      font-size: 18px;
+      color: #314d5a;
+      font-weight: 800;
+    }
+
+    h4 {
+    font-size: 1.1rem;
+}
+
+.fa-map-marker:before {
+    color: #701571;
+}
+.Darkhr {
+  border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+.Lighthr {
+  border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+#header_placeholder {
+    height:121px;
+    width:100%;
+    display:none;
+}
+
+.expandwidth {
+    margin: 0 0;
+    width : 100%;
+}
+  </style>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+</head>
+
+<body id="top">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
+    <button id="contact-button" class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp mdl-color--purple">
+      <div class="mdl-button__ripple mdl-color--purple"></div>
+      <i class="material-icons">mail</i>
+    </button>
+    <header class="mdl-layout__header site-header is-casting-shadow is-compact">
+      <div class="mdl-layout__header-row site-logo-row" style="background-color: #e4e2e4;"><span class="mdl-layout__title">
+          <div class="site-logo"></div><span class="site-description">Easy-Colis Tracking</span>
+        </span></div>
+    </header>
+    <div id="header_placeholder"></div>
+
+    <main class="mdl-layout__content">
+      <div class="container">
+        <section class="section--center mdl-grid site-max-width">
+          <header
+          class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
+          style="display: flex; align-items: center; justify-content: center;">
+          <div style="vertical-align: top; display: inline-block;text-align: center;">
+            <div class="h2style">Etat commande</div>
+            <hr class="Darkhr DesktopSeparator">
+            <hr class="LightMobileSeparator Lighthr">
+            <div style="color: #000000; margin: 0 auto;">
+              Votre colis est en acheminement vers la plateforme de livraison.
+            </div>
+          </div>
+        </header>
+          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme">
+            <hr class="Darkhr MobileSeparator">
+            <div class="mdl-card__supporting-text" style="color: #000000; margin: 0 auto;">
+              <div class="table-responsive-md">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td style="width: 35%; font-weight: bold;" >Num. Commande</td>
+                      <td>34885</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Transporteur</td>
+                      <td>Ups Access Point Economy</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Date Commande</td>
+                      <td>17/06/2019</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <section class="section--center mdl-grid site-max-width">
+          <header
+            class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
+            style="display: flex; align-items: center; justify-content: center;">
+            <div style="vertical-align: top; display: inline-block;text-align: center;">
+              <img class="article-image" src="img/tabledetail.png" border="0" alt="" style="width: 20%; opacity: 0.55;">
+              <div class="h2style">Détail du suivi</div>
+            </div><br>
+          </header>
+          
+          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme">
+            <hr class="Darkhr MobileSeparator">
+            <div class="mdl-card__supporting-text" style="color: #000000; margin: 0 auto;">
+              <div class="table-responsive-md">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td style="font-weight: bold;">N° Tracking</td>
+                      <td>1ZW5236XXXXXXX</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Poids</td>
+                      <td>4,44</td>
+                    </tr>
+                    <tr>
+                      <td style="width: 35%; font-weight: bold;">Etat du colis</td>
+                      <td>En TRANSIT. Votre colis est en acheminement vers la plateforme de livraison.</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Lien de suivi</td>
+                      <td style="text-align: right">
+                        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">
+                        <div class="mdl-button__ripple"></div>
+                        <i class="fa fa-truck" aria-hidden="true"></i>
+                        <span class="mdl-button__label">Tracking</span>
+                      </button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section--center mdl-grid site-max-width">
+          <header
+            class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
+            style="display: flex; align-items: center; justify-content: center;">
+            <div class="mdl-card__supporting-text ProgressSupportCard" style="padding: 0px;">
+              <img class="article-image" src="img/colis.png" border="0" alt="">
+            </div>
+          </header>
+          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme"
+            style="height: fit-content;">
+            <hr class="Darkhr MobileSeparator">
+            <div class="mdl-card__supporting-text" style="width: 100%;">
+              <div>
+                <div class="card ">
+                  <div id="HorizontalProgressBar" class="fullwidth">
+                      <ul class="progress-tracker progress-tracker--text progress-tracker--center" style="margin-top: 5px; margin-bottom: 5px;">
+                        <li class="progress-step is-complete">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text" style="font-weight: bold;">
+                            En préparation
+                          </div>
+                        </li>
+
+                        <li class="progress-step is-complete">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text" style="font-weight: bold;">
+                            Expédié
+                          </div>
+                        </li>
+
+                        <li class="progress-step is-active" aria-current="step">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text" style="font-weight: bold;">
+                            En transit
+                          </div>
+                        </li>
+
+                        <li class="progress-step">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text" style="font-weight: bold;">
+                            En livraison
+                          </div>
+                        </li>
+
+                        <li class="progress-step">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text" style="font-weight: bold;">
+                            En instance au point de retrait
+                          </div>
+                        </li>
+                      </ul>
+                  </div>
+
+
+                  <div id="VerticalProgressBar" class="fullwidth">
+                      <ul class="progress-tracker progress-tracker--vertical" style="margin-top: 5px; margin-bottom: 5px;">
+                        <li class="progress-step is-complete">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text">
+                            <h4 class="progress-title" style="font-weight: bold;">En préparation</h4>
+                            Summary text explaining this step to the user
+                          </div>
+                        </li>
+
+                        <li class="progress-step is-complete">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text">
+                            <h4 class="progress-title" style="font-weight: bold;">Expédié</h4>
+                            Summary text explaining this step to the user
+                          </div>
+                        </li>
+
+                        <li class="progress-step is-active" aria-current="step">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text">
+                            <h4 class="progress-title" style="font-weight: bold;">En transit</h4>
+                            Summary text explaining this step to the user
+                          </div>
+                        </li>
+
+                        <li class="progress-step">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text">
+                            <h4 class="progress-title" style="font-weight: bold;">En livraison</h4>
+                            Summary text explaining this step to the user
+                          </div>
+                        </li>
+
+                        <li class="progress-step">
+                          <div class="progress-marker"></div>
+                          <div class="progress-text">
+                            <h4 class="progress-title" style="font-weight: bold;">En instance au point de retrait</h4>
+                            Summary text explaining this step to the user
+                          </div>
+                        </li>
+                      </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section--center mdl-grid site-max-width">
+          <header
+            class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
+            style="display: flex; align-items: center; justify-content: center;">
+            <div class="mdl-card__supporting-text" style="padding-right: 0px; padding-left: 0px; text-align: center;">
+              <i class="material-icons fheaders">
+                format_list_bulleted
+                </i>
+              <div class="h2style">Détail du suivi</div><br>
+            </div>
+          </header>
+          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme"
+            style="height: fit-content;">
+            <hr class="Darkhr MobileSeparator">
+            <div class="mdl-card__supporting-text" style="padding-left: 32px ; padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+
+              <div id="VerticalProgressBar" class="fullwidth">
+                <ul class="progress-tracker progress-tracker--vertical"  style="margin-top: 15px; margin-bottom: 5px;">
+                  <li class="progress-step is-complete">
+                    <div class="progress-marker"></div>
+                    <div class="progress-text">
+                      <h4 class="progress-title" style="font-weight: bold;">Expédiée</h4>
+                      mardi 02/06/2019 0:23
+                    </div>
+                  </li>
+
+                  <li class="progress-step is-complete">
+                    <div class="progress-marker"></div>
+                    <div class="progress-text">
+                      <h4 class="progress-title" style="font-weight: bold;">En acheminement vers la plateforme de livraison</h4>
+                      jeudi 14/06/2019 3:55
+                    </div>
+                  </li>
+
+                  <li class="progress-step is-active" aria-current="step">
+                    <div class="progress-marker"></div>
+                    <div class="progress-text">
+                      <h4 class="progress-title" style="font-weight: bold;">Colis déclaré</h4>
+                      samedi 16/06/2019 13:28
+                    </div>
+                  </li>
+            </div>
+            </div>
+          </div>
+        </section>
+        <section class="section--center mdl-grid site-max-width">
+          <header
+            class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
+            style="display: flex; align-items: center; justify-content: center;">
+            <div class="mdl-card__supporting-text" style="padding-right: 0px; padding-left: 0px; text-align: center;">
+              <i class="fa fa-map-marker fheaders" aria-hidden="true"></i>
+              <div class="h2style" >Adresse de livraison</div>
+            </div>
+          </header>
+          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme"
+            style="height: fit-content;">
+            <hr class="Darkhr MobileSeparator">
+            <div class="mdl-card__supporting-text" style="color: #000000; margin: 0 auto; width: 95%; padding-right: 0px; padding-left: 0px;">
+              <div class="table-responsive-md">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td style="font-weight: bold;">Adresse</td>
+                      <td>ERAM RUE DE LA FONTAINE, 27 53600 EVRON France</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Téléphone</td>
+                      <td>06xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                      <td style="width: 35% ; font-weight: bold;">Email</td>
+                      <td>client@gmail.com</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive-md">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th id ="MapHeader">Point relais</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div id="mapDiv" >
+                        <div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="mdl-mini-footer">
+        <div class="footer-container">
+          <div class="mdl-logo"  style="text-align: center;">&reg; Easy Colis est une marque déposée de Crosslog International. <br><a href="http://www.easy-colis.com/"
+              target="_blank">Easy-Colis</a>
+            </div>
+        </div>
+      </footer>
+  </main>
+  <script src="https://code.getmdl.io/1.3.0/material.min.js" defer></script>
+
+
+  <script>
+    $(document).ready(function () {
+      $(window).resize(function () {
+        if ($(window).width() < 996) {
+          $('#HorizontalProgressBar').hide();
+          $('#VerticalProgressBar').show();
+        } else {
+          $('#HorizontalProgressBar').show();
+          $('#VerticalProgressBar').hide();
+        }
+
+      });
+      $(window).trigger('resize');
+        
+    
+    });
+    $(window).on('load', function(){
+      var width = document.getElementById('MapHeader').offsetWidth;
+      var height = 430;
+      if(width<700){
+        height = 640;
+        }
+      else{
+        height = 430;
+          }
+      document.getElementById("mapDiv").insertAdjacentHTML('afterend','<div id="mapDiv" class="order_carrier_content box" ><iframe style="border:1px solid #CCCCCC;"id="iFrameMap" width="100%" height="'+height+'" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=TestToken2&ID_CLIENT=8f3d093b-3a54-11e3-acfb-d8d385e2f9ec&QUERY=75002+Paris&COUNTRY=FR" frameborder="0"></iframe><div><div class="clear"></div>');
+      });
+  </script>
+
+  </div>
+</body>
+
+</html>
