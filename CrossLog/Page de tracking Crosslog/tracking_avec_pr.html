@@ -104,7 +104,12 @@
     .ProgressSupportCard{
         width : 30%;
       }
-
+      @media(max-width: 995px){
+      #PackageStatus
+      {
+        padding-left: 32px;
+      }
+      }
     @media(min-width: 480px){
       .fheaders {
       font-size: 3vw;
@@ -311,7 +316,7 @@
           <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme"
             style="height: fit-content;">
             <hr class="Darkhr MobileSeparator">
-            <div class="mdl-card__supporting-text" style=" padding: 0; width: 100%;">
+            <div id="PackageStatus" class="mdl-card__supporting-text" style="width: 100%;">
               <div>
                 <div class="card ">
                   <div id="HorizontalProgressBar" class="fullwidth">
