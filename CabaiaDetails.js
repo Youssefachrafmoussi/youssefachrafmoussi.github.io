@@ -11,7 +11,7 @@ checkoutToken = checkoutjson.token;
 if(["Livraison point relais"].indexOf(checkoutjson.shipping_rate.title) !=-1)
 {
     var iframe = '<iframe src ="https://wscartography.crossdesk.com/cms/back/selectedPPT.aspx?ID_COMMANDE='+checkoutToken+'&ID_CLIENT=4ae89fbd-23b1-479f-b368-68bce6177454"></iframe>';
-    var IframeT = '<h2 class="os-step__title" id="main-header" tabindex="-1">Votre point relais : </h2>' ; 
+    var IframeT = '<div class="content-box__row content-box__row--no-border"><h2>Votre point relais</h2></div>' ; 
     $( "div.map.default-background" ).before( IframeT );
     $( "div.map.default-background" ).replaceWith( iframe );
 }
