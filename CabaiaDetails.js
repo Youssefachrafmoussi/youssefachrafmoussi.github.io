@@ -1,4 +1,4 @@
-if (document.URL.indexOf("com/account/orders") != -1 && document.body.innerHTML.search("Livraison point relais")>0) {
+if (document.URL.indexOf("com/account/orders") != -1 && document.body.innerHTML.search("Livraison point relais")!= -1) {
         var shopId = document.getElementById('in-context-paypal-metadata').getAttribute('data-shop-id');
 
         var pageurl = document.URL;
