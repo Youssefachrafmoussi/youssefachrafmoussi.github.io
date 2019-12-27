@@ -40,6 +40,32 @@
 .progress-step:hover .progress-marker::before {
   background-color: #4c7589;
 }
+
+
+
+.modified.progress-marker::before{
+  font-family: FontAwesome;
+  content: "\f192";
+}
+.modified.progress-step.is-active .progress-marker::before{
+  font-family: FontAwesome;
+  content: "\f192";
+  background-color: rgb(230, 230, 230);
+  color: #000;
+
+}
+.modified.progress-step.is-complete .progress-marker::before  {
+  font-family: FontAwesome;
+  content: "\f192";
+  background-color: rgb(230, 230, 230);
+  color: #000;
+
+}
+.modified.progress-step:hover .progress-marker::before {
+  background-color: rgb(230, 230, 230);
+  color: #000;
+
+}
     * {
       margin: 0;
       padding: 0;
@@ -212,6 +238,14 @@
 .table-striped>tbody>tr:nth-child(odd)>th {
   background-color: rgba(232, 219, 233, 0.219);
  }
+ .table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
   </style>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
@@ -235,6 +269,22 @@
       <div class="container">
         <section class="section--center mdl-grid site-max-width">
           <header
+          class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
+          style="display: flex; align-items: center; justify-content: center;">
+          <div style="vertical-align: top; display: inline-block;text-align: center;">
+            <img class="article-image" src="img/agent2.gif" border="0" alt="" style="width: 20%; margin-bottom: 10px;">
+
+            <div style="color: #000000; margin: 0 auto;">
+              Bonne nouvelle Mr.X !
+            </div>
+            <div style="color: #000000; margin: 0 auto;">
+              Votre colis est en acheminement vers la plateforme de livraison.
+            </div>
+          </div>
+        </header>
+        </section>
+        <section class="section--center mdl-grid site-max-width">
+          <header
           class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
           style="display: flex; align-items: center; justify-content: center;">
           <div style="vertical-align: top; display: inline-block;text-align: center;">
@@ -246,82 +296,6 @@
             </div>
           </div>
         </header>
-          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme">
-            <hr class="Darkhr MobileSeparator">
-            <div class="mdl-card__supporting-text" style="padding: 0;color: #000000; margin: 0 auto;">
-              <div class="table-responsive-md">
-                <table class="table table-striped">
-                  <tbody>
-                    <tr>
-                      <td style="width: 35%; font-weight: bold;" >Num. Commande</td>
-                      <td>34885</td>
-                    </tr>
-                    <tr>
-                      <td style="font-weight: bold;">Transporteur</td>
-                      <td>Ups Access Point Economy</td>
-                    </tr>
-                    <tr>
-                      <td style="font-weight: bold;">Date Commande</td>
-                      <td>17/06/2019</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-            </div>
-          </div>
-        </section>
-        <section class="section--center mdl-grid site-max-width">
-          <header
-            class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
-            style="display: flex; align-items: center; justify-content: center;">
-            <div style="vertical-align: top; display: inline-block;text-align: center;">
-              <img class="article-image" src="img/tabledetail.png" border="0" alt="" style="width: 20%; opacity: 0.55;">
-              <div class="h2style">Détail des colis</div>
-            </div><br>
-          </header>
-          
-          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme">
-            <hr class="Darkhr MobileSeparator">
-            <div class="mdl-card__supporting-text" style="padding: 0; color: #000000; margin: 0 auto;">
-              <div class="table-responsive-md">
-                <table class="table table-striped">
-                  <tbody>
-                    <tr>
-                      <td style="font-weight: bold;">N° Tracking</td>
-                      <td>1ZW5236XXXXXXX</td>
-                    </tr>
-                    <tr>
-                      <td style="font-weight: bold;">Poids</td>
-                      <td>4,44</td>
-                    </tr>
-                    <tr>
-                      <td style="width: 35%; font-weight: bold;">Etat du colis</td>
-                      <td>En TRANSIT. Votre colis est en acheminement vers la plateforme de livraison.</td>
-                    </tr>
-                    <tr>
-                      <td style="font-weight: bold;">Lien de suivi</td>
-                      <td style="text-align: right">
-                        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">
-                        <div class="mdl-button__ripple"></div>
-                        <i class="fa fa-truck" aria-hidden="true"></i>
-                        <span class="mdl-button__label">Tracking</span>
-                      </button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section--center mdl-grid site-max-width">
-          <header
-            class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
-            style="display: flex; align-items: center; justify-content: center;">
-            <div class="mdl-card__supporting-text ProgressSupportCard" style="padding: 0px;">
-              <img class="article-image" src="img/colis.png" border="0" alt="">
-            </div>
-          </header>
           <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme"
             style="height: fit-content;">
             <hr class="Darkhr MobileSeparator">
@@ -417,64 +391,162 @@
             </div>
           </div>
         </section>
+
+
         <section class="section--center mdl-grid site-max-width">
-          <header
-            class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
-            style="display: flex; align-items: center; justify-content: center;">
+          <!--header
+          class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
+          style="display: flex; align-items: center; justify-content: center;">
+          <div style="vertical-align: top; display: inline-block;text-align: center;">
+            <div class="h2style">Etat commande</div>
+            <hr class="Darkhr DesktopSeparator">
+            <hr class="LightMobileSeparator Lighthr">
+            <div style="color: #000000; margin: 0 auto;">
+              Votre colis est en acheminement vers la plateforme de livraison.
+            </div>
+          </div>
+        </header-->
+          <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme">
+            <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-top: 2px;">
+            <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-top: 2px;">
             <div class="mdl-card__supporting-text" style="padding: 0; text-align: center;">
-              <i class="material-icons fheaders">
-                format_list_bulleted
-                </i>
+              <div class="h2style">Détail commande</div><br>
+            </div>
+            <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+            <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+            <div class="mdl-card__supporting-text" style="padding: 0;color: #000000; margin: 0 auto;">
+              <div class="table-responsive-md">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td style="width: 35%; font-weight: bold;" >Num. Commande</td>
+                      <td>34885</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Transporteur</td>
+                      <td>Ups Access Point Economy</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Date Commande</td>
+                      <td>17/06/2019</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+            <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ;">
+            <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ;">
+            <div class="mdl-card__supporting-text" style="text-align: center;">
+              <!--img class="article-image" src="img/tabledetail.png" border="0" alt="" style="width: 20%; opacity: 0.55;"-->
+              <div class="h2style">Date de livraison estimée</div>
+          </div>
+          <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+          <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+          <div class="mdl-card__supporting-text" style="padding: 0; color: #000000; margin: 0 auto;">
+            <div class="table-responsive-md">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div style="font-weight: bold;  padding-bottom: 10px;">Dimanche</div> 
+                      <div style="font-weight: bold; font-size: 38px;  padding-bottom: 10px;">31</div>
+                      <div style="font-weight: bold;">Decembre</div></td>
+                    <td>
+                      <i class="material-icons" style="padding-top: 20px;font-size: 60px;">
+                        timer
+                        </i>
+                    </td>
+                </tbody>
+              </table>
+              </div>
+          </div>
+          <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ;">
+          <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ;">
+            <div class="mdl-card__supporting-text" style="text-align: center;">
+                <!--img class="article-image" src="img/tabledetail.png" border="0" alt="" style="width: 20%; opacity: 0.55;"-->
+                <div class="h2style">Détail des colis</div>
+            </div>
+            <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+            <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+
+            <div class="mdl-card__supporting-text" style="padding: 0; color: #000000; margin: 0 auto;">
+              <div class="table-responsive-md">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td style="font-weight: bold;">N° Tracking</td>
+                      <td>1ZW5236XXXXXXX</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Poids</td>
+                      <td>4,44</td>
+                    </tr>
+                    <tr>
+                      <td style="width: 35%; font-weight: bold;">Etat du colis</td>
+                      <td>En TRANSIT. Votre colis est en acheminement vers la plateforme de livraison.</td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: bold;">Lien de suivi</td>
+                      <td style="text-align: right">
+                        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">
+                        <div class="mdl-button__ripple"></div>
+                        <i class="fa fa-truck" aria-hidden="true"></i>
+                        <span class="mdl-button__label">Tracking</span>
+                      </button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme">
+            <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-top: 2px;">
+            <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-top: 2px;">
+            <div class="mdl-card__supporting-text" style="padding: 0; text-align: center;">
               <div class="h2style">Détail du suivi</div><br>
             </div>
-          </header>
-          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme"
-            style="height: fit-content;">
-            <hr class="Darkhr MobileSeparator">
+            <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+            <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
             <div class="mdl-card__supporting-text" style="padding-left: 32px ; padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
-
-              <div id="VerticalProgressBar" class="fullwidth">
+              <div id="VerticalProgressBar2" class="fullwidth">
                 <ul class="progress-tracker progress-tracker--vertical"  style="margin-top: 15px; margin-bottom: 5px;">
-                  <li class="progress-step is-complete">
-                    <div class="progress-marker"></div>
-                    <div class="progress-text">
-                      <h4 class="progress-title" style="font-weight: bold;">Expédiée</h4>
-                      mardi 02/06/2019 0:23
+                  <li class="modified progress-step is-complete">
+                    <div class="modified progress-marker"></div>
+                    <div class="modified progress-text">
+                      <h4 class="modified progress-title" style="font-weight: bold;">Mardi 02/06/2019 0:23</h4>
+                      Expédiée
                     </div>
                   </li>
 
-                  <li class="progress-step is-complete">
-                    <div class="progress-marker"></div>
-                    <div class="progress-text">
-                      <h4 class="progress-title" style="font-weight: bold;">En acheminement vers la plateforme de livraison</h4>
-                      jeudi 14/06/2019 3:55
+                  <li class="modified progress-step is-complete">
+                    <div class="modified progress-marker"></div>
+                    <div class="modified progress-text">
+                      <h4 class="modified progress-title" style="font-weight: bold;">Jeudi 14/06/2019 3:55</h4>
+                      En acheminement vers la plateforme de livraison
                     </div>
                   </li>
 
-                  <li class="progress-step is-active" aria-current="step">
-                    <div class="progress-marker"></div>
-                    <div class="progress-text">
-                      <h4 class="progress-title" style="font-weight: bold;">Colis déclaré</h4>
-                      samedi 16/06/2019 13:28
+                  <li class="modified progress-step is-active" aria-current="step">
+                    <div class="modified progress-marker"></div>
+                    <div class="modified progress-text">
+                      <h4 class="modified progress-title" style="font-weight: bold;">Samedi 16/06/2019 13:28</h4>
+                      Colis déclaré
                     </div>
                   </li>
             </div>
             </div>
           </div>
-        </section>
-        <section class="section--center mdl-grid site-max-width">
-          <header
-            class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white  mdl-shadow--4dp nomarginsunderme"
-            style="display: flex; align-items: center; justify-content: center;">
+          <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme">
+            <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-top: 2px;">
+            <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-top: 2px;">
             <div class="mdl-card__supporting-text" style="padding: 0; text-align: center;">
               <i class="fa fa-map-marker fheaders" aria-hidden="true"></i>
               <div class="h2style" >Adresse de livraison</div>
             </div>
-          </header>
-          <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp nomarginsaboveme"
-            style="height: fit-content;">
-            <hr class="Darkhr MobileSeparator">
-            <div class="mdl-card__supporting-text" style="padding: 0; color: #000000; margin: 0 auto; width: 95%;">
+            <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+            <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+            <div class="mdl-card__supporting-text" style="padding:0; padding-left: 10px; padding-right:10px;color: #000000; margin: 0 auto; width: 95%;">
               <div class="table-responsive-md">
                 <table class="table table-striped">
                   <tbody>
@@ -492,6 +564,20 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
+              <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-top: 5px;">
+              <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-top: 5px;">
+              <div class="mdl-card__supporting-text" style="padding: 0; text-align: center;">
+                <div class="h2style">Remarques</div><br>
+              </div>
+              <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+              <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+              <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre remarque ici">
+                <small id="emailHelp" class="form-text text-muted">Une dernière ramarque à notre transpoteur</small>
+                <br><br>
+                <div  style="text-align: center;"><button type="submit" class="btn btn-primary mb-2">Envoyer</button></div>
               </div>
               <!--div class="table-responsive-md">
                 <table class="table">
