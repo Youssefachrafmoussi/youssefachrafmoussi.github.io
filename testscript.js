@@ -23,18 +23,17 @@ function init(){
     var city = jQuery("#CrossCity").text();
     var postcode = jQuery("#CrossPC").text();
     var selectedCountry = jQuery("#CrossCountry").text();
-    
     if(address.length==0){
-    address = jQuery("#CrossAddress").text();
+    address = jQuery("#shipping:street1").val();
     }
     if(city.length==0){
-    city = jQuery("#CrossCity").text();
+    city = jQuery("#shipping:city").val();
     }    
     if(postcode.length==0){
-    postcode = jQuery("#CrossPC").text();
+    postcode = jQuery("#shipping:postcode").val();
     }    
     if(selectedCountry.length==0){
-    selectedCountry = jQuery("#CrossCountry").text();
+    selectedCountry = jQuery("#shipping:country_id").children("option:selected").val();
     }   
     var token = jQuery("#CrossTokenDiv").text();
     var arrayLength = ListPointRelais.length;
