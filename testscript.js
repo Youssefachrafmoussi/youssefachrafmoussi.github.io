@@ -25,7 +25,8 @@ function init(){
     var selectedCountry = jQuery("#CrossCountry").text();
     var token = jQuery("#CrossTokenDiv").text();
     var arrayLength = ListPointRelais.length;
-    for (var i = 0; i < arrayLength; i++) {
+    if(address.length>0){
+        for (var i = 0; i < arrayLength; i++) {
         var PointRelais = ListPointRelais[i];
                 jQuery('.shipping-method-item').each( function(i) {
                     if(jQuery(this).hasClass("current-shipping") || jQuery(this).find(".prettyradio > a.checked").length>0){
@@ -77,7 +78,12 @@ function init(){
             CancelAdaptTheme();
         }
         });
-    
+    }
+    else{
+        thisTimeout = setTimeout(function() {
+            myFunction();
+        }, 1000);
+    }
 }
 
 function AdaptTheme(){
