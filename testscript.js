@@ -19,7 +19,7 @@ function init(){
     var ListPointRelais = jQuery("#crossListPointsRelais").text().split(",");
     var parents = jQuery("#cross_Div_point_relais").text();
     var customisation = jQuery("#cross_Nom_du_fichier_script").text();
-    var address = jQuery("#CrossAddress").val();
+    var address = jQuery("#CrossAddress").text();
     var city = jQuery("#CrossCity").text();
     var postcode = jQuery("#CrossPC").text();
     var selectedCountry = jQuery("#CrossCountry").text();
