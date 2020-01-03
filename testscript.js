@@ -3,7 +3,7 @@ var thisTimeout = setTimeout(function() {
     myFunction();
 }, 1000);
 
-if ((jQuery(this).hasClass("current-shipping") || jQuery(this).find(".prettyradio > a.checked").length>0) && !done) {
+if ((jQuery(this).hasClass("current-shipping") || jQuery(this).find(".prettyradio > a.checked").length>0) && !done && jQuery("#CrossAddress").text().length>0) {
     myFunction();
 }
 function myFunction() {
@@ -23,18 +23,6 @@ function init(){
     var city = jQuery("#CrossCity").text();
     var postcode = jQuery("#CrossPC").text();
     var selectedCountry = jQuery("#CrossCountry").text();
-    if(address.length==0){
-    address = jQuery("#shipping:street1").val();
-    }
-    if(city.length==0){
-    city = jQuery("#shipping:city").val();
-    }    
-    if(postcode.length==0){
-    postcode = jQuery("#shipping:postcode").val();
-    }    
-    if(selectedCountry.length==0){
-    selectedCountry = jQuery("#shipping:country_id").children("option:selected").val();
-    }   
     var token = jQuery("#CrossTokenDiv").text();
     var arrayLength = ListPointRelais.length;
     for (var i = 0; i < arrayLength; i++) {
