@@ -1,70 +1,84 @@
+var done = false;
+var thisTimeout = setTimeout(function() {
+    myFunction();
+}, 1000);
+
+if ((jQuery(this).hasClass("current-shipping") || jQuery(this).find(".prettyradio > a.checked").length>0) && !done) {
+    myFunction();
+}
+function myFunction() {
+    clearTimeout(thisTimeout);
+    done = true;
+    init();
+}
 var custom = 0;
 var mapheight = 670;
-jQuery(window).bind("load", function () {
-var id_client = jQuery("#CrossIdClient").text();
-var couleur = jQuery("#CrossColor").text();
-var ListPointRelais = jQuery("#crossListPointsRelais").text().split(",");
-var parents = jQuery("#cross_Div_point_relais").text();
-var customisation = jQuery("#cross_Nom_du_fichier_script").text();
-var city = jQuery("#CrossCity").text();
-var postcode = jQuery("#CrossPC").text();
-var selectedCountry = jQuery("#CrossCountry").text();
-var token = jQuery("#CrossTokenDiv").text();
-var arrayLength = ListPointRelais.length;
-for (var i = 0; i < arrayLength; i++) {
-    var PointRelais = ListPointRelais[i];
-            jQuery('.shipping-method-item').each( function(i) {
-                if(jQuery(this).hasClass("current-shipping") || jQuery(this).find(".prettyradio > a.checked").length>0){
-                    if(jQuery(this).text().indexOf(PointRelais)>=0){
-                        if(jQuery('#mapDiv').length){
-                            jQuery('#mapDiv').remove();
-                        }
-                        AdaptTheme();
-                        var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
-                        var nbparents = parseInt(parents);
-                        if (isNaN(nbparents)){
-                            nbparents = 0;
-                            jQuery(this).append(Cart);
+function init(){
+    var id_client = jQuery("#CrossIdClient").text();
+    var couleur = jQuery("#CrossColor").text();
+    var ListPointRelais = jQuery("#crossListPointsRelais").text().split(",");
+    var parents = jQuery("#cross_Div_point_relais").text();
+    var customisation = jQuery("#cross_Nom_du_fichier_script").text();
+    var address = jQuery("#shipping:street1").val();
+    var city = jQuery("#CrossCity").text();
+    var postcode = jQuery("#CrossPC").text();
+    var selectedCountry = jQuery("#CrossCountry").text();
+    var token = jQuery("#CrossTokenDiv").text();
+    var arrayLength = ListPointRelais.length;
+    for (var i = 0; i < arrayLength; i++) {
+        var PointRelais = ListPointRelais[i];
+                jQuery('.shipping-method-item').each( function(i) {
+                    if(jQuery(this).hasClass("current-shipping") || jQuery(this).find(".prettyradio > a.checked").length>0){
+                        if(jQuery(this).text().indexOf(PointRelais)>=0){
+                            if(jQuery('#mapDiv').length){
+                                jQuery('#mapDiv').remove();
+                            }
+                            AdaptTheme();
+                            var Cart = GetCart(token, id_client,address, postcode, city, selectedCountry, couleur, customisation, PointRelais);
+                            var nbparents = parseInt(parents);
+                            if (isNaN(nbparents)){
+                                nbparents = 0;
+                                jQuery(this).append(Cart);
+                            }
+                            else{
+                                GetHook(jQuery(this), nbparents).append(Cart);
+                            }
                         }
                         else{
-                            GetHook(jQuery(this), nbparents).append(Cart);
+                            if(jQuery('#mapDiv').length){
+                                jQuery('#mapDiv').remove();
+                            }
+                            CancelAdaptTheme();
                         }
                     }
-                    else{
-                        if(jQuery('#mapDiv').length){
-                            jQuery('#mapDiv').remove();
-                        }
-                        CancelAdaptTheme();
-                    }
-                }
-                });
+                    });
+    }
+    jQuery(document).on('click', '.shipping-method-item' ,function(){
+        token = jQuery("#CrossTokenDiv").text();
+        if(jQuery(this).text().indexOf(ListPointRelais[0])>=0){
+            if(jQuery('#mapDiv').length){
+                jQuery('#mapDiv').remove();
+            }
+        AdaptTheme();
+        var Cart = GetCart(token, id_client,address, postcode, city, selectedCountry, couleur, customisation, PointRelais);
+        var nbparents = parseInt(parents);
+        if (isNaN(nbparents)){
+            nbparents = 0;
+            jQuery(this).append(Cart);
+        }
+        else{
+            GetHook(jQuery(this), nbparents).append(Cart);
+        }
+        }
+        else{
+            if(jQuery('#mapDiv').length){
+                jQuery('#mapDiv').remove();
+            }
+            CancelAdaptTheme();
+        }
+        });
+    
 }
-jQuery(document).on('click', '.shipping-method-item' ,function(){
-    token = jQuery("#CrossTokenDiv").text();
-    if(jQuery(this).text().indexOf(ListPointRelais[0])>=0){
-        if(jQuery('#mapDiv').length){
-            jQuery('#mapDiv').remove();
-        }
-    AdaptTheme();
-    var Cart = GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais);
-    var nbparents = parseInt(parents);
-    if (isNaN(nbparents)){
-        nbparents = 0;
-        jQuery(this).append(Cart);
-    }
-    else{
-        GetHook(jQuery(this), nbparents).append(Cart);
-    }
-    }
-    else{
-        if(jQuery('#mapDiv').length){
-            jQuery('#mapDiv').remove();
-        }
-        CancelAdaptTheme();
-    }
-    });
-});
-
 
 function AdaptTheme(){
 
@@ -94,7 +108,7 @@ function GetHook(element, nbparents) {
     var hook = element.parents().eq(nbparents);
     return hook;
 }
-function GetCart(token, id_client, postcode, city, selectedCountry, couleur, customisation, PointRelais) {
+function GetCart(token, id_client,address, postcode, city, selectedCountry, couleur, customisation, PointRelais) {
 
     var Cart = '';
     if (custom == 1) {
@@ -105,9 +119,9 @@ function GetCart(token, id_client, postcode, city, selectedCountry, couleur, cus
             if (res.length > 0) {
                 if (res[0] == PointRelais)
                 {
-                    Cart = '<div id="mapDiv"  style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&CARRIER=55" frameborder="0"></iframe><div>';
+                    Cart = '<div id="mapDiv"  style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + address + '+' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&CARRIER=55" frameborder="0"></iframe><div>';
                     if (couleur.length > 0) {
-                        Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY=' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&COLOR=' + couleur + '&CARRIER=55" frameborder="0"></iframe><div>';
+                        Cart = '<div id="mapDiv" style="border-top:0px;">Cliquez sur un des numÃ©ros disponibles ci-dessous.<br>Le point relais affichÃ© est celui oÃ¹ sera effectuÃ©e la livraison.<br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="' + mapheight + '" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=' + token + '&ID_CLIENT=' + id_client + '&QUERY='+ address + '+' + postcode + '+' + city + '&COUNTRY=' + selectedCountry + '&COLOR=' + couleur + '&CARRIER=55" frameborder="0"></iframe><div>';
                     }
                 }
             }
