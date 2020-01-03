@@ -23,6 +23,19 @@ function init(){
     var city = jQuery("#CrossCity").text();
     var postcode = jQuery("#CrossPC").text();
     var selectedCountry = jQuery("#CrossCountry").text();
+    
+    if(address.length==0){
+    address = jQuery("#CrossAddress").text();
+    }
+    if(city.length==0){
+    city = jQuery("#CrossCity").text();
+    }    
+    if(postcode.length==0){
+    postcode = jQuery("#CrossPC").text();
+    }    
+    if(selectedCountry.length==0){
+    selectedCountry = jQuery("#CrossCountry").text();
+    }   
     var token = jQuery("#CrossTokenDiv").text();
     var arrayLength = ListPointRelais.length;
     for (var i = 0; i < arrayLength; i++) {
