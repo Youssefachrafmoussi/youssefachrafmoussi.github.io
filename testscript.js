@@ -30,6 +30,6 @@ function xlInit() {
 function xlDisplaySelectedPPT() {
     id_client="aa43452a-60bc-49d1-8d86-48b81fb32095";
     order_Id=document.getElementsByClassName("order-number")[0].innerHTML;
-    var Cart = '<div id="mapDiv" class="order_carrier_content box" style="border-top:0px;"><br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="300" src="https://wscartography.crossdesk.com/cms/back/selectedPPT.aspx?ID_COMMANDE=' + order_Id + '&ID_CLIENT=' + id_client + '" frameborder="0"></iframe><div><br><br>';
+    var Cart = '<div>Point relais :</div><div id="mapDiv" class="order_carrier_content box" style="border-top:0px;"><br><br><iframe style="border:1px solid #CCCCCC;" id="iFrameMap" width="100%" height="300" src="https://wscartography.crossdesk.com/cms/back/selectedPPT.aspx?ID_COMMANDE=' + order_Id + '&ID_CLIENT=' + id_client + '" frameborder="0"></iframe><div><br><br>';
     document.getElementsByClassName("order_details")[0].insertAdjacentHTML('afterend',Cart);
 }
