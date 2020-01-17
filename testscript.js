@@ -14,12 +14,13 @@
 var xlUrl = "https://wscartography.crossdesk.com";
 var xlPptCarriers = "Chronopost – Point relais – 24/48h CD";
 window.addEventListener('load', function () {
-            console.log(document.getElementsByClassName("shipped_via")[0].innerHTML);
         xlInit();
 })
 
 function xlInit() {
     if (document.URL.indexOf("tempetedelouest.fr/mon-compte/voir-commande") != -1) {
+                    console.log("Selected");
+            console.log(document.getElementsByClassName("shipped_via")[0].innerHTML);
             if (xlPptCarriers.includes(document.getElementsByClassName("shipped_via")[0].innerHTML))
             {
                         xlDisplaySelectedPPT();
