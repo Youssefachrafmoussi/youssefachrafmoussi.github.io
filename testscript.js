@@ -28,6 +28,6 @@ function xlInit() {
         
     }
 }
-function xlDisplayMap() {
+function xlDisplaySelectedPPT() {
     console.log("SelectedPPT!");
 }
