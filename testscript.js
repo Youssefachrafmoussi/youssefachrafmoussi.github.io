@@ -19,9 +19,9 @@ window.addEventListener('load', function () {
 
 function xlInit() {
     if (document.URL.indexOf("tempetedelouest.fr/mon-compte/voir-commande") != -1) {
-                    console.log("Selected");
+            var shippingMethod=document.getElementsByClassName("shipped_via")[0].innerHTML;
             console.log(document.getElementsByClassName("shipped_via")[0].innerHTML);
-            if (xlPptCarriers.includes(document.getElementsByClassName("shipped_via")[0].innerHTML))
+            if (shippingMethod.includes(xlPptCarriers))
             {
                         xlDisplaySelectedPPT();
             }
