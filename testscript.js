@@ -962,3 +962,18 @@ function xlDisplayMapCustomNines() {
         }
     }
 }
+
+
+var done = false;
+var thisTimeout = setTimeout(function () {
+    myFunction();
+}, 1000);
+
+if (document.getElementById('mapDiv')==null) {
+    myFunction();
+}
+function myFunction() {
+    clearTimeout(thisTimeout);
+    done = true;
+    init();
+}
