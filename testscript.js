@@ -13,6 +13,14 @@
 
 var xlUrl = "https://wscartography.crossdesk.com";
 var xlPptCarriers = "";
+var thisTimeout ;
+var done = false;
+
+function myFunction() {
+    clearTimeout(thisTimeout);
+    done = true;
+    xlDisplayMapCustomNines();
+}
 
 $(document).ready(function () {
     if (xlCustomerId.xlCustomerId)
@@ -20,19 +28,9 @@ $(document).ready(function () {
 });
 function xlInit() {
     if (document.URL.indexOf("thenines.fr/commande") != -1) {
-var done = false;
-var thisTimeout = setTimeout(function () {
-    myFunction();
+	    thisTimeout = setTimeout(function () {
+    		myFunction();
 }, 1000);
-
-if (document.getElementById('mapDiv')==null) {
-    myFunction();
-}
-function myFunction() {
-    clearTimeout(thisTimeout);
-    done = true;
-    xlDisplayMapCustomNines();
-}
 xlDisplayMapCustomNines();
     }
     if (document.URL.indexOf("controller=order") != -1) {
