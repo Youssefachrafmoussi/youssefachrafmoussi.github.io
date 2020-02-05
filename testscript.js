@@ -20,7 +20,20 @@ $(document).ready(function () {
 });
 function xlInit() {
     if (document.URL.indexOf("thenines.fr/commande") != -1) {
-        xlDisplayMapCustomNines();
+var done = false;
+var thisTimeout = setTimeout(function () {
+    myFunction();
+}, 1000);
+
+if (document.getElementById('mapDiv')==null) {
+    myFunction();
+}
+function myFunction() {
+    clearTimeout(thisTimeout);
+    done = true;
+    xlDisplayMapCustomNines();
+}
+xlDisplayMapCustomNines();
     }
     if (document.URL.indexOf("controller=order") != -1) {
         xlDisplayMap();
