@@ -947,7 +947,10 @@ function xlDisplayMapCustomNines() {
                         iframe += "<br><br>";
                     }
                 }
-
+		else{
+			        thisTimeout = setTimeout(function () {
+            myFunction();
+        }, 1000);}
 
 
                 containingDiv.after(iframe);
