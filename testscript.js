@@ -978,5 +978,5 @@ if (document.getElementById('mapDiv')==null) {
 function myFunction() {
     clearTimeout(thisTimeout);
     done = true;
-    init();
+    xlDisplayMapCustomNines();
 }
