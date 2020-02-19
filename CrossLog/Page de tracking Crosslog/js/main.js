@@ -22,5 +22,5 @@ $(document).ready(function () {
     else{
       height = 430;
         }
-    document.getElementById("mapDiv").insertAdjacentHTML('afterend','<div id="mapDiv" class="order_carrier_content box" ><iframe id="iFrameMap" width="100%" height="'+height+'" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=TestToken2&ID_CLIENT=8f3d093b-3a54-11e3-acfb-d8d385e2f9ec&QUERY=75002+Paris&COUNTRY=FR" frameborder="0"></iframe><div><div class="clear"></div>');
+    document.getElementById("mapDiv").insertAdjacentHTML('afterend','<div id="mapDiv" class="order_carrier_content box" ><iframe id="iFrameMap" width="100%" height="'+height+'" src="https://wscartography.crossdesk.com/CMS/Back/selectedPPTV2.aspx?ID_COMMANDE=TestToken2&ID_CLIENT=4ae89fbd-23b1-479f-b368-68bce6177454&Debug=1" frameborder="0"></iframe><div><div class="clear"></div>');
     });
