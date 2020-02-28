@@ -1,0 +1,499 @@
+<!DOCTYPE html><html><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking Easy-Colis</title>
+  <meta name="description" content="Page de tracking easy-colis">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="styles/material.indigo-pink.min.css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:300,400&amp;display=swap">
+
+  <link rel="stylesheet" href="styles/progress-tracker.css">
+  <script src="https://kit.fontawesome.com/71b2fd7239.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all"><link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all"><link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
+  <link rel="stylesheet" href="styles/starability-all.css">
+
+  <link rel="stylesheet" href="styles/theme.css">
+</head>    <meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<title></title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<style type="text/css">
+  a { color: #0000ee; text-decoration: underline; } a:hover { color: #0000ee; text-decoration: underline; }
+body,html{padding:0;margin:0}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}html{font-size:14px;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent}body{font-family:Arial,Helvetica,sans-serif;font-size:1rem;line-height:1.5;color:#373a3c;background-color:#fff}p,ul{margin:0}.container{width:100%;padding-right:0;padding-left:0;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.container-fluid{width:100%;padding-right:0;padding-left:0;margin-right:auto;margin-left:auto}.row{display:flex;flex-wrap:wrap}.no-gutters,.row{margin-right:0;margin-left:0}.no-gutters&gt;.col,.no-gutters&gt;[class*=col-]{padding-right:0;padding-left:0}.col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col-auto,.col-lg,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-auto,.col-md,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-md-auto,.col-sm,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-auto{position:relative;width:100%;padding-right:0;padding-left:0}.col{flex-basis:0;flex-grow:1;max-width:100%}.col-auto{flex:0 0 auto;width:auto;max-width:100%}.col-1{flex:0 0 8.33333%;max-width:8.33333%}.col-2{flex:0 0 16.66667%;max-width:16.66667%}.col-3{flex:0 0 25%;max-width:25%}.col-4{flex:0 0 33.33333%;max-width:33.33333%}.col-5{flex:0 0 41.66667%;max-width:41.66667%}.col-6{flex:0 0 50%;max-width:50%}.col-7{flex:0 0 58.33333%;max-width:58.33333%}.col-8{flex:0 0 66.66667%;max-width:66.66667%}.col-9{flex:0 0 75%;max-width:75%}.col-10{flex:0 0 83.33333%;max-width:83.33333%}.col-11{flex:0 0 91.66667%;max-width:91.66667%}.col-12{flex:0 0 100%;max-width:100%}.order-first{order:-1}.order-last{order:13}.order-0{order:0}.order-1{order:1}.order-2{order:2}.order-3{order:3}.order-4{order:4}.order-5{order:5}.order-6{order:6}.order-7{order:7}.order-8{order:8}.order-9{order:9}.order-10{order:10}.order-11{order:11}.order-12{order:12}.offset-1{margin-left:8.33333%}.offset-2{margin-left:16.66667%}.offset-3{margin-left:25%}.offset-4{margin-left:33.33333%}.offset-5{margin-left:41.66667%}.offset-6{margin-left:50%}.offset-7{margin-left:58.33333%}.offset-8{margin-left:66.66667%}.offset-9{margin-left:75%}.offset-10{margin-left:83.33333%}.offset-11{margin-left:91.66667%}@media (min-width:576px){.col-sm{flex-basis:0;flex-grow:1;max-width:100%}.col-sm-auto{flex:0 0 auto;width:auto;max-width:100%}.col-sm-1{flex:0 0 8.33333%;max-width:8.33333%}.col-sm-2{flex:0 0 16.66667%;max-width:16.66667%}.col-sm-3{flex:0 0 25%;max-width:25%}.col-sm-4{flex:0 0 33.33333%;max-width:33.33333%}.col-sm-5{flex:0 0 41.66667%;max-width:41.66667%}.col-sm-6{flex:0 0 50%;max-width:50%}.col-sm-7{flex:0 0 58.33333%;max-width:58.33333%}.col-sm-8{flex:0 0 66.66667%;max-width:66.66667%}.col-sm-9{flex:0 0 75%;max-width:75%}.col-sm-10{flex:0 0 83.33333%;max-width:83.33333%}.col-sm-11{flex:0 0 91.66667%;max-width:91.66667%}.col-sm-12{flex:0 0 100%;max-width:100%}.order-sm-first{order:-1}.order-sm-last{order:13}.order-sm-0{order:0}.order-sm-1{order:1}.order-sm-2{order:2}.order-sm-3{order:3}.order-sm-4{order:4}.order-sm-5{order:5}.order-sm-6{order:6}.order-sm-7{order:7}.order-sm-8{order:8}.order-sm-9{order:9}.order-sm-10{order:10}.order-sm-11{order:11}.order-sm-12{order:12}.offset-sm-0{margin-left:0}.offset-sm-1{margin-left:8.33333%}.offset-sm-2{margin-left:16.66667%}.offset-sm-3{margin-left:25%}.offset-sm-4{margin-left:33.33333%}.offset-sm-5{margin-left:41.66667%}.offset-sm-6{margin-left:50%}.offset-sm-7{margin-left:58.33333%}.offset-sm-8{margin-left:66.66667%}.offset-sm-9{margin-left:75%}.offset-sm-10{margin-left:83.33333%}.offset-sm-11{margin-left:91.66667%}}@media (min-width:768px){.col-md{flex-basis:0;flex-grow:1;max-width:100%}.col-md-auto{flex:0 0 auto;width:auto;max-width:100%}.col-md-1{flex:0 0 8.33333%;max-width:8.33333%}.col-md-2{flex:0 0 16.66667%;max-width:16.66667%}.col-md-3{flex:0 0 25%;max-width:25%}.col-md-4{flex:0 0 33.33333%;max-width:33.33333%}.col-md-5{flex:0 0 41.66667%;max-width:41.66667%}.col-md-6{flex:0 0 50%;max-width:50%}.col-md-7{flex:0 0 58.33333%;max-width:58.33333%}.col-md-8{flex:0 0 66.66667%;max-width:66.66667%}.col-md-9{flex:0 0 75%;max-width:75%}.col-md-10{flex:0 0 83.33333%;max-width:83.33333%}.col-md-11{flex:0 0 91.66667%;max-width:91.66667%}.col-md-12{flex:0 0 100%;max-width:100%}.order-md-first{order:-1}.order-md-last{order:13}.order-md-0{order:0}.order-md-1{order:1}.order-md-2{order:2}.order-md-3{order:3}.order-md-4{order:4}.order-md-5{order:5}.order-md-6{order:6}.order-md-7{order:7}.order-md-8{order:8}.order-md-9{order:9}.order-md-10{order:10}.order-md-11{order:11}.order-md-12{order:12}.offset-md-0{margin-left:0}.offset-md-1{margin-left:8.33333%}.offset-md-2{margin-left:16.66667%}.offset-md-3{margin-left:25%}.offset-md-4{margin-left:33.33333%}.offset-md-5{margin-left:41.66667%}.offset-md-6{margin-left:50%}.offset-md-7{margin-left:58.33333%}.offset-md-8{margin-left:66.66667%}.offset-md-9{margin-left:75%}.offset-md-10{margin-left:83.33333%}.offset-md-11{margin-left:91.66667%}}@media (min-width:992px){.col-lg{flex-basis:0;flex-grow:1;max-width:100%}.col-lg-auto{flex:0 0 auto;width:auto;max-width:100%}.col-lg-1{flex:0 0 8.33333%;max-width:8.33333%}.col-lg-2{flex:0 0 16.66667%;max-width:16.66667%}.col-lg-3{flex:0 0 25%;max-width:25%}.col-lg-4{flex:0 0 33.33333%;max-width:33.33333%}.col-lg-5{flex:0 0 41.66667%;max-width:41.66667%}.col-lg-6{flex:0 0 50%;max-width:50%}.col-lg-7{flex:0 0 58.33333%;max-width:58.33333%}.col-lg-8{flex:0 0 66.66667%;max-width:66.66667%}.col-lg-9{flex:0 0 75%;max-width:75%}.col-lg-10{flex:0 0 83.33333%;max-width:83.33333%}.col-lg-11{flex:0 0 91.66667%;max-width:91.66667%}.col-lg-12{flex:0 0 100%;max-width:100%}.order-lg-first{order:-1}.order-lg-last{order:13}.order-lg-0{order:0}.order-lg-1{order:1}.order-lg-2{order:2}.order-lg-3{order:3}.order-lg-4{order:4}.order-lg-5{order:5}.order-lg-6{order:6}.order-lg-7{order:7}.order-lg-8{order:8}.order-lg-9{order:9}.order-lg-10{order:10}.order-lg-11{order:11}.order-lg-12{order:12}.offset-lg-0{margin-left:0}.offset-lg-1{margin-left:8.33333%}.offset-lg-2{margin-left:16.66667%}.offset-lg-3{margin-left:25%}.offset-lg-4{margin-left:33.33333%}.offset-lg-5{margin-left:41.66667%}.offset-lg-6{margin-left:50%}.offset-lg-7{margin-left:58.33333%}.offset-lg-8{margin-left:66.66667%}.offset-lg-9{margin-left:75%}.offset-lg-10{margin-left:83.33333%}.offset-lg-11{margin-left:91.66667%}}@media (min-width:1200px){.col-xl{flex-basis:0;flex-grow:1;max-width:100%}.col-xl-auto{flex:0 0 auto;width:auto;max-width:100%}.col-xl-1{flex:0 0 8.33333%;max-width:8.33333%}.col-xl-2{flex:0 0 16.66667%;max-width:16.66667%}.col-xl-3{flex:0 0 25%;max-width:25%}.col-xl-4{flex:0 0 33.33333%;max-width:33.33333%}.col-xl-5{flex:0 0 41.66667%;max-width:41.66667%}.col-xl-6{flex:0 0 50%;max-width:50%}.col-xl-7{flex:0 0 58.33333%;max-width:58.33333%}.col-xl-8{flex:0 0 66.66667%;max-width:66.66667%}.col-xl-9{flex:0 0 75%;max-width:75%}.col-xl-10{flex:0 0 83.33333%;max-width:83.33333%}.col-xl-11{flex:0 0 91.66667%;max-width:91.66667%}.col-xl-12{flex:0 0 100%;max-width:100%}.order-xl-first{order:-1}.order-xl-last{order:13}.order-xl-0{order:0}.order-xl-1{order:1}.order-xl-2{order:2}.order-xl-3{order:3}.order-xl-4{order:4}.order-xl-5{order:5}.order-xl-6{order:6}.order-xl-7{order:7}.order-xl-8{order:8}.order-xl-9{order:9}.order-xl-10{order:10}.order-xl-11{order:11}.order-xl-12{order:12}.offset-xl-0{margin-left:0}.offset-xl-1{margin-left:8.33333%}.offset-xl-2{margin-left:16.66667%}.offset-xl-3{margin-left:25%}.offset-xl-4{margin-left:33.33333%}.offset-xl-5{margin-left:41.66667%}.offset-xl-6{margin-left:50%}.offset-xl-7{margin-left:58.33333%}.offset-xl-8{margin-left:66.66667%}.offset-xl-9{margin-left:75%}.offset-xl-10{margin-left:83.33333%}.offset-xl-11{margin-left:91.66667%}}.error-field{-webkit-animation-name:shake;animation-name:shake;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.error-field input,.error-field textarea{border-color:#a94442!important;color:#a94442!important}.field-error{padding:5px 10px;font-size:14px;font-weight:700;position:absolute;top:-20px;right:10px}.field-error:after{top:100%;left:50%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;border-color:rgba(136,183,213,0);border-top-color:#ebcccc;border-width:5px;margin-left:-5px}.spinner{margin:0 auto;width:70px;text-align:center}.spinner&gt;div{width:12px;height:12px;background-color:hsla(0,0%,100%,.5);margin:0 2px;border-radius:100%;display:inline-block;-webkit-animation:sk-bouncedelay 1.4s infinite ease-in-out both;animation:sk-bouncedelay 1.4s infinite ease-in-out both}.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes sk-bouncedelay{0%,80%,to{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes sk-bouncedelay{0%,80%,to{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}@-webkit-keyframes shake{0%,to{-webkit-transform:translateZ(0);transform:translateZ(0)}10%,30%,50%,70%,90%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}}@keyframes shake{0%,to{-webkit-transform:translateZ(0);transform:translateZ(0)}10%,30%,50%,70%,90%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}}@media only screen and (max-width:480px){.hide-mobile{display:none!important}}@media only screen and (min-width:980px){.hide-desktop{display:none!important}}
+</style>
+
+
+</head>
+<body>
+
+<span><body id="top">
+<div class="mdl-layout__container">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded is-small-screen" data-upgraded=",MaterialLayout">
+  <button id="contact-button" class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-shadow--4dp">
+<img class="article-image" src="img/facebook-messenger.png" border="0" alt="" style="margin-bottom: 10px;">
+</button>
+<header class="mdl-layout__header site-header is-casting-shadow is-compact">
+<div class="mdl-layout__header-row site-logo-row" style="background-color: #e4e2e4;"><span class="mdl-layout__title">
+    <div class="site-logo"></div><span class="site-description">Easy-Colis Tracking</span>
+  </span></div>
+</header>
+<div id="header_placeholder"></div>
+<main class="mdl-layout__content">
+<div class="container"><section class="section--center mdl-grid site-max-width"><div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  mdl-shadow--4dp" style="display: flex; align-items: center; justify-content: center;"><div style="vertical-align: top; display: inline-block;text-align: center;">
+      <img class="article-image" src="img/logoClient.jpg" border="0" alt="" style="width: 20%; margin-bottom: 10px;">
+
+      <div style="color: #000000; margin: 0 auto;">
+        Bonne nouvelle Mr.X !
+      </div>
+      <div style="color: #000000; margin: 0 auto;">
+        Votre colis est en acheminement vers la plateforme de livraison.
+</div>
+</div></section><section class="section--center mdl-grid site-max-width"><div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  mdl-shadow--4dp">
+<div style="vertical-align: top; display: inline-block;text-align: center;width: 100%;">
+<div class="h2style">Date de livraison estimée</div>
+
+<hr class="Darkhr DesktopSeparator">
+<hr class="LightMobileSeparator Lighthr">
+<div class="mdl-card__supporting-text" style="padding: 0;color: #000000; margin: 0 auto;">
+        <div class="table-responsive-md">
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <td>
+                  <div style="font-weight: bold;  padding-bottom: 10px;">Dimanche</div> 
+                  <div style="font-weight: bold; font-size: 38px;  padding-bottom: 10px;">31</div>
+                  <div style="font-weight: bold;">Decembre</div></td>
+                <td>
+                  <i class="fas fa-calendar-alt" style="padding-top: 20px;font-size: 60px;" aria-hidden="true"></i>
+                </td>
+            </tr></tbody>
+          </table>
+          </div>
+      </div>
+</div>
+</div><div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  mdl-shadow--4dp">
+<hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 auto;">
+<hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 auto;">
+<div class="mdl-card__supporting-text" style="text-align: center;">
+  <div class="h2style">Transporteur</div>
+</div>
+<hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+<hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+<div class="mdl-card__supporting-text" style="padding: 0; color: #000000; margin: 0 auto; overflow-x: auto;width: 100%;">
+<div class="table-responsive-md">
+  <div style="text-align: center;">
+    <img class="article-image" src="img/ups.png" border="0" alt="" style="width: 10%;">
+  </div><br>
+  <table class="table table-striped">
+      <tbody>
+          <tr>
+              <th scope="col">N° Tracking</th>
+              <th scope="col">Transporteur</th>
+              <th scope="col">Lien de suivi</th>
+              <th scope="col">Date Commande</th>
+              <th scope="col">Nombre de colis</th>
+              <th scope="col">Poids</th>
+              <th scope="col">Etat du colis</th>
+            </tr>
+        <tr>
+          <td>1ZW5236XXXXXXX</td>
+          <td>Ups Access Point Economy</td>
+          <td style="text-align: right">
+              <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">
+              <div class="mdl-button__ripple"></div>
+              <i class="fa fa-truck" aria-hidden="true"></i>
+              <span class="mdl-button__label">Tracking</span>
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button></td>
+            <td>17/06/2019</td>
+            <td>1</td>
+            <td>4,44</td>
+            <td>En TRANSIT. Votre colis est en acheminement vers la plateforme de livraison.</td>
+      </tbody>
+    </table>
+</div>
+</div>
+</div></section><section class="section--center mdl-grid site-max-width"><div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  mdl-shadow--4dp"><div style="vertical-align: top; display: inline-block;text-align: center;">
+      <div class="h2style">Etat commande</div>
+      <div style="color: #000;">N° 2020</div>
+      <hr class="Darkhr DesktopSeparator">
+      <hr class="LightMobileSeparator Lighthr">
+      <div style="color: #000000; margin: 0 auto; font-weight: bold;">
+        En TRANSIT - Votre colis est en acheminement vers la plateforme de livraison.
+      </div>
+</div>
+</div><div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  mdl-shadow--4dp">
+    <hr class="Darkhr MobileSeparator">
+    <div id="PackageStatus" class="mdl-card__supporting-text" style="width: 100%;">
+      <div>
+        <div class="card ">
+          <div id="HorizontalProgressBar" class="fullwidth">
+              <ul class="progress-tracker progress-tracker--text progress-tracker--center" style="margin-top: 5px; margin-bottom: 5px;">
+                <li class="progress-step is-complete">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text" style="font-weight: bold;">
+                    En préparation
+                  </div>
+                </li>
+
+                <li class="progress-step is-complete">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text" style="font-weight: bold;">
+                    Expédié
+                  </div>
+                </li>
+
+                <li class="progress-step is-active" aria-current="step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text" style="font-weight: bold;">
+                    En transit
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text" style="font-weight: bold;">
+                    En livraison
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text" style="font-weight: bold;">
+                    En instance au point de retrait
+                  </div>
+                </li>
+              </ul>
+          </div>
+
+
+          <div id="VerticalProgressBar" class="fullwidth" style="display: none;">
+              <ul class="progress-tracker progress-tracker--vertical" style="margin-top: 5px; margin-bottom: 5px;">
+                <li class="progress-step is-complete">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title" style="font-weight: bold;">En préparation</h4>
+                  </div>
+                </li>
+
+                <li class="progress-step is-complete">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title" style="font-weight: bold;">Expédié</h4>
+                  </div>
+                </li>
+
+                <li class="progress-step is-active" aria-current="step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title" style="font-weight: bold;">En transit</h4>
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title" style="font-weight: bold;">En livraison</h4>
+                  </div>
+                </li>
+
+                <li class="progress-step">
+                  <div class="progress-marker"></div>
+                  <div class="progress-text">
+                    <h4 class="progress-title" style="font-weight: bold;">En instance au point de retrait</h4>
+                  </div>
+                </li>
+              </ul>
+          </div>
+          <div style="margin-left: 10px;">
+            <p>
+              <button class="btn btn-primary mb-2" style="background-color: #701571; border-color: #701571;" type="button" data-toggle="collapse" data-target="#VerticalProgressBar2" aria-expanded="false" aria-controls="collapseExample">
+                <span color="" style="font-size: 20px; font-weight: bold;">+</span>  Détails de toutes les étapes
+              </button>
+            </p>
+            <div id="VerticalProgressBar2" class="fullwidth collapse">
+              <ul class="progress-tracker progress-tracker--vertical" style="margin-top: 15px; margin-bottom: 5px;">
+                <li class="modified progress-step is-complete">
+                  <div class="modified progress-marker"></div>
+                  <div class="modified progress-text">
+                    <h4 class="modified progress-title" style="font-weight: bold;">Mardi 02/06/2019 0:23</h4>
+                    Expédiée
+                  </div>
+                </li>
+
+                <li class="modified progress-step is-complete">
+                  <div class="modified progress-marker"></div>
+                  <div class="modified progress-text">
+                    <h4 class="modified progress-title" style="font-weight: bold;">Jeudi 14/06/2019 3:55</h4>
+                    En acheminement vers la plateforme de livraison
+                  </div>
+                </li>
+
+                <li class="modified progress-step is-active" aria-current="step">
+                  <div class="modified progress-marker"></div>
+                  <div class="modified progress-text">
+                    <h4 class="modified progress-title" style="font-weight: bold;">Samedi 16/06/2019 13:28</h4>
+                    Colis déclaré
+                  </div>
+                </li>
+          </ul></div>
+          </div>
+        </div>
+      </div>
+</div>
+</div></section><section class="section--center mdl-grid site-max-width"><div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  mdl-shadow--4dp">
+<hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 auto;">
+<hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 auto;">
+<div class="mdl-card__supporting-text" style="text-align: center;">
+  <div class="h2style">Transporteur</div>
+</div>
+<hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+<hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+<div class="mdl-card__supporting-text" style="padding: 0; color: #000000; margin: 0 auto;">
+<div class="table-responsive-md">
+  <div style="text-align: center;">
+    <img class="article-image" src="img/ups.png" border="0" alt="" style="width: 20%;">
+  </div><br>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td style="font-weight: bold;">N° Tracking</td>
+        <td>1ZW5236XXXXXXX</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Transporteur</td>
+        <td>Ups Access Point Economy</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Lien de suivi</td>
+        <td style="text-align: right">
+          <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">
+          <div class="mdl-button__ripple"></div>
+          <i class="fa fa-truck" aria-hidden="true"></i>
+          <span class="mdl-button__label">Tracking</span>
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button></td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Date Commande</td>
+        <td>17/06/2019</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold; width: 45%;">Nombre de colis</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Poids</td>
+        <td>4,44</td>
+      </tr>
+      <tr>
+        <td style="width: 35%; font-weight: bold;">Etat du colis</td>
+        <td>En TRANSIT. Votre colis est en acheminement vers la plateforme de livraison.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="mdl-card__supporting-text" style="text-align: center; margin: 0 auto;">
+  <div class="h2style">Comment s'est passée votre livraison ?</div>
+</div>
+<hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+<hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+<div class="form-group">
+    <label for="exampleInputEmail1"></label>
+    <form>
+      <fieldset class="starability-checkmark" style="margin: 0 auto;">                 
+        <input type="radio" id="rate5" name="rating" value="5">
+        <label for="rate5" title="Amazing">5 stars</label>
+    
+        <input type="radio" id="rate4" name="rating" value="4">
+        <label for="rate4" title="Very good">4 stars</label>
+    
+        <input type="radio" id="rate3" name="rating" value="3">
+        <label for="rate3" title="Average">3 stars</label>
+    
+        <input type="radio" id="rate2" name="rating" value="2">
+        <label for="rate2" title="Not good">2 stars</label>
+    
+        <input type="radio" id="rate1" name="rating" value="1">
+        <label for="rate1" title="Terrible">1 star</label>
+      </fieldset>
+    </form>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Laisser un commentaire" style="border: 3px solid #afb4b9; width: 90%; margin: 0 auto;">
+    <br><br>
+    <div style="text-align: center;"><button type="submit" class="btn btn-primary mb-2" style="background-color: #701571; border-color: #701571;">Envoyer</button></div>
+  </div>
+</div>
+</div><div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  mdl-shadow--4dp">
+<div class="mdl-card__supporting-text" style="text-align: center; margin: 0; padding: 0; width: 100%;">
+  <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 auto;">
+  <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 auto;">
+  <div class="mdl-card__supporting-text" style="text-align: center;">
+    <i class="fa fa-map-marker fheaders" aria-hidden="true"></i>
+    <div class="h2style">Adresse de livraison</div>
+  </div>
+  <hr class="Darkhr DesktopSeparator" style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+  <hr class="LightMobileSeparator Lighthr " style="padding: 0; color: #000000; margin: 0 ; margin-bottom: 5px;">
+  <div class="mdl-card__supporting-text" style="padding: 0;color: #000000; margin: 0 auto;">
+    <div class="table-responsive-md">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td style="width: 35%; font-weight: bold;">Client</td>
+            <td>Mr.X</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-responsive-md">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th id="MapHeader">Point relais
+          </th></tr>
+          <tr>
+            <td style="padding: 0;">
+              <div id="mapDiv">
+              <div>
+            </div></div><div id="mapDiv" class="order_carrier_content box"><div><div class="clear"></div></div></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div><div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  mdl-shadow--4dp">
+<hr class="Darkhr MobileSeparator">
+<div id="PackageStatus" class="mdl-card__supporting-text" style="width: 100%;">
+<div>
+<div class="card ">
+  <div id="VerticalProgressBarStatic" class="fullwidth" style="padding-left: 10px;">
+      <ul class="progress-tracker progress-tracker--vertical" style="margin-top: 5px; margin-bottom: 5px;">
+        <li class="progress-step is-complete">
+          <div class="progress-marker"></div>
+          <div class="progress-text">
+            <h4 class="progress-title" style="font-weight: bold;">En préparation</h4>
+          </div>
+        </li>
+
+        <li class="progress-step is-complete">
+          <div class="progress-marker"></div>
+          <div class="progress-text">
+            <h4 class="progress-title" style="font-weight: bold;">Expédié</h4>
+          </div>
+        </li>
+
+        <li class="progress-step is-active" aria-current="step">
+          <div class="progress-marker"></div>
+          <div class="progress-text">
+            <h4 class="progress-title" style="font-weight: bold;">En transit</h4>
+          </div>
+        </li>
+
+        <li class="progress-step">
+          <div class="progress-marker"></div>
+          <div class="progress-text">
+            <h4 class="progress-title" style="font-weight: bold;">En livraison</h4>
+          </div>
+        </li>
+
+        <li class="progress-step">
+          <div class="progress-marker"></div>
+          <div class="progress-text">
+            <h4 class="progress-title" style="font-weight: bold;">En instance au point de retrait</h4>
+          </div>
+        </li>
+      </ul>
+  </div>
+  <div style="margin-left: 10px;">
+    <p>
+      <button class="btn btn-primary mb-2" style="background-color: #701571; border-color: #701571;" type="button" data-toggle="collapse" data-target="#VerticalProgressBar2" aria-expanded="false" aria-controls="collapseExample">
+        <span color="" style="font-size: 20px; font-weight: bold;">+</span>  Détails de toutes les étapes
+      </button>
+    </p>
+    <div id="VerticalProgressBar2" class="fullwidth collapse">
+      <ul class="progress-tracker progress-tracker--vertical" style="margin-top: 15px; margin-bottom: 5px;">
+        <li class="modified progress-step is-complete">
+          <div class="modified progress-marker"></div>
+          <div class="modified progress-text">
+            <h4 class="modified progress-title" style="font-weight: bold;">Mardi 02/06/2019 0:23</h4>
+            Expédiée
+          </div>
+        </li>
+
+        <li class="modified progress-step is-complete">
+          <div class="modified progress-marker"></div>
+          <div class="modified progress-text">
+            <h4 class="modified progress-title" style="font-weight: bold;">Jeudi 14/06/2019 3:55</h4>
+            En acheminement vers la plateforme de livraison
+          </div>
+        </li>
+
+        <li class="modified progress-step is-active" aria-current="step">
+          <div class="modified progress-marker"></div>
+          <div class="modified progress-text">
+            <h4 class="modified progress-title" style="font-weight: bold;">Samedi 16/06/2019 13:28</h4>
+            Colis déclaré
+          </div>
+        </li>
+  </ul></div>
+  </div>
+</div>
+</div>
+</div>
+</div></section><footer class="mdl-mini-footer" style="padding-bottom: 0px;padding-top: 0px;"><div class="footer-container">
+    <div class="mdl-logo" style="text-align: center;">® Easy Colis est une marque déposée de Crosslog International. <br><a href="http://www.easy-colis.com/" target="_blank">Easy-Colis</a>
+      </div>
+  </div>
+</footer></div></main></div></div>      
+
+<script src="https://code.getmdl.io/1.3.0/material.min.js" defer=""></script>
+
+
+<script>
+$(document).ready(function () {
+$(window).resize(function () {
+  if ($(window).width() < 996) {
+    $('#HorizontalProgressBar').hide();
+    $('#VerticalProgressBar').show();
+  } else {
+    $('#HorizontalProgressBar').show();
+    $('#VerticalProgressBar').hide();
+  }
+
+});
+$(window).trigger('resize');
+  
+
+});
+$(window).on('load', function(){
+var width = document.getElementById('MapHeader').offsetWidth;
+var height = 430;
+if(width<700){
+  height = 640;
+  }
+else{
+  height = 430;
+    }
+document.getElementById("mapDiv").insertAdjacentHTML('afterend','<div id="mapDiv" class="order_carrier_content box" ><iframe id="iFrameMap" width="100%" height="'+height+'" src="https://wscartography.crossdesk.com/CMS/Front/picker.aspx?ID_COMMANDE=TestToken2&ID_CLIENT=8f3d093b-3a54-11e3-acfb-d8d385e2f9ec&QUERY=75002+Paris&COUNTRY=FR" frameborder="0"></iframe><div><div class="clear"></div>');
+});
+</script>
+
+
+
+
+<style>.tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}.ws_toolbar {z-index:100000} .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden} .ws_toolbar img {padding:2px;margin:0px}</style></body></span>
+
+
+
+</body></html>
