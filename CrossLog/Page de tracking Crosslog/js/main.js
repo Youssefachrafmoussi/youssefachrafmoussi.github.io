@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     });
     $(window).trigger('resize');
-      
+    $('.blockbuilder-preferences')[0].remove();
   
   });
   $(window).on('load', function(){
