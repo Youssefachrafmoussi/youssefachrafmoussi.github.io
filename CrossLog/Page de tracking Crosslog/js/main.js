@@ -17,8 +17,8 @@ $(document).ready(function () {
 
 
     document.addEventListener('click', function (e) {
-      alert(e.target.textContent.innerHTML);
-      if (e.target.textContent.innerHTML.indexOf("Bonne")) {
+      alert(e.target.innerHTML);
+      if (e.target.innerHTML.indexOf("Bonne")) {
           alert('yes');
       }
       else{
