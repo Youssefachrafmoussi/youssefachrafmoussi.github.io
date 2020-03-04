@@ -17,8 +17,7 @@ $(document).ready(function () {
 
 
     document.addEventListener('click', function (e) {
-      var span = document.getElementById("MessageBlock");
-      if (e.target.contains(span)) {
+      if (e.target.contains("Bonne")) {
           alert('yes');
       }
       else{
