@@ -17,9 +17,12 @@ $(document).ready(function () {
 
 
     document.addEventListener('click', function (e) {
-
-      if (e.target.id=="MessageBlock") {
+      var span = document.getElementById("MessageBlock");
+      if (e.target.contains(span)) {
           alert('yes');
+      }
+      else{
+        alert('no');
       }
   }, false);
 
