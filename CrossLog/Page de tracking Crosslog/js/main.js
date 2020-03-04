@@ -10,7 +10,27 @@ $(document).ready(function () {
 
     });
     $(window).trigger('resize');
-  
+
+
+
+    //MODIFY EDITOR HERE
+
+
+    document.addEventListener('click', function (e) {
+
+      if (e.target.id=="MessageBlock") {
+          alert('yes');
+      }
+  }, false);
+
+
+
+
+    //END EDITOR MODIFICATION HERE
+
+
+
+
   });
   $(window).on('load', function(){
     var width = document.getElementById('MapHeader').offsetWidth;
