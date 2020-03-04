@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 
     //MODIFY EDITOR HERE
-
+/*
 
     document.addEventListener('click', function (e) {
       alert(e.target.innerHTML);
@@ -25,7 +25,7 @@ $(document).ready(function () {
         alert('no');
       }
   }, false);
-
+*/
 
 
 
