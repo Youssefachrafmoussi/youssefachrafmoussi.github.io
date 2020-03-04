@@ -17,7 +17,7 @@ $(document).ready(function () {
 
 
     document.addEventListener('click', function (e) {
-      if (e.target.contains("Bonne")) {
+      if (e.target.textContent.includes("Bonne")) {
           alert('yes');
       }
       else{
