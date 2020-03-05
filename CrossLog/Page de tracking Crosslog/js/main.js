@@ -39,7 +39,9 @@ $(window).resize(function () {
     $('#home-button').css('margin-right','0px');
     $('#truck-button').css('margin-right','0px');
     $('#list-button').css('margin-right','0px');
-
+    $('#home-button').css('visibility','visible');
+    $('#truck-button').css('visibility','visible');
+    $('#list-button').css('visibility','visible');
 
   } else {
     $('#home-button').css('visibility','hidden');
