@@ -15,7 +15,6 @@
      bParent.replaceChild(a,bHolder);    
 }
 $(document).ready(function () {
-  alert('yes');
 $(window).resize(function () {
 
   if ($(window).width() < 996) {
