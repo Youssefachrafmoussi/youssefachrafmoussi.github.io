@@ -231,7 +231,7 @@ img.article-image {
   position: fixed;
   display: block;
   right: 0;
-  top: 120px;
+  top: 140px;
   margin-right: 40px;
   z-index: 900;
 }
@@ -240,7 +240,7 @@ img.article-image {
   position: fixed;
   display: block;
   right: 0;
-  top: 160px;
+  top: 200px;
   margin-right: 40px;
   z-index: 900;
 }
