@@ -46,13 +46,13 @@ $(window).resize(function () {
     $('#list-button').css('visibility','visible');
 
     $( "#home-button" ).click(function() {
-      document.getElementById('BarreHHolder').scrollIntoView();
+      document.getElementById('BarreHHolder').scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
     });
     $( "#truck-button" ).click(function() {
-      document.getElementById('TransporterVHolder').scrollIntoView();
+      document.getElementById('TransporterVHolder').scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
     });
     $( "#list-button" ).click(function() {
-      document.getElementById('ProduitsCommandeHHolder').scrollIntoView();
+      document.getElementById('ProduitsCommandeHHolder').scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
     });
 
   } else {
