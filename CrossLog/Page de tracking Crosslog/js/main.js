@@ -36,9 +36,9 @@ $(window).resize(function () {
     swapDom(ProduitsCommandeHHolder,TransporterVHolder);
     swapped=1;
     }
-    $('#home-button').css('margin-right','0px');
-    $('#truck-button').css('margin-right','0px');
-    $('#list-button').css('margin-right','0px');
+    $('#home-button').css('visibility','hidden');
+    $('#truck-button').css('visibility','hidden');
+    $('#list-button').css('visibility','hidden');
 
 
   } else {
