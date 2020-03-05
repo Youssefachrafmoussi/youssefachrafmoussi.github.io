@@ -36,15 +36,15 @@ $(window).resize(function () {
     swapDom(ProduitsCommandeHHolder,TransporterVHolder);
     swapped=1;
     }
-    $('#home-button').css('visibility','hidden');
-    $('#truck-button').css('visibility','hidden');
-    $('#list-button').css('visibility','hidden');
+    $('#home-button').css('margin-right','0px');
+    $('#truck-button').css('margin-right','0px');
+    $('#list-button').css('margin-right','0px');
 
 
   } else {
-    $('#home-button').css('margin-right','40px');
-    $('#truck-button').css('margin-right','40px');
-    $('#list-button').css('margin-right','40px');
+    $('#home-button').css('visibility','hidden');
+    $('#truck-button').css('visibility','hidden');
+    $('#list-button').css('visibility','hidden');
 
     var BarreHHolder = document.getElementById('BarreHHolder');
     var TransporterVHolder = document.getElementById('TransporterVHolder');
