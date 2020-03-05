@@ -27,6 +27,8 @@ $(window).resize(function () {
   }
 
   if ($(window).width() < 840) {
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+
 
     var BarreHHolder = document.getElementById('BarreHHolder');
     var TransporterVHolder = document.getElementById('TransporterVHolder');
@@ -42,6 +44,16 @@ $(window).resize(function () {
     $('#home-button').css('visibility','visible');
     $('#truck-button').css('visibility','visible');
     $('#list-button').css('visibility','visible');
+
+    $( "#home-button" ).click(function() {
+      document.getElementById('BarreHHolder').scrollIntoView();
+    });
+    $( "#truck-button" ).click(function() {
+      document.getElementById('TransporterVHolder').scrollIntoView();
+    });
+    $( "#list-button" ).click(function() {
+      document.getElementById('ProduitsCommandeHHolder').scrollIntoView();
+    });
 
   } else {
     $('#home-button').css('visibility','hidden');
