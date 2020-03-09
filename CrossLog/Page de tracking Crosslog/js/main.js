@@ -59,7 +59,7 @@ $(window).resize(function () {
     $('#home-button').css('visibility','hidden');
     $('#truck-button').css('visibility','hidden');
     $('#list-button').css('visibility','hidden');
-    $('#ProductsSupportingText').css('max-height','200px');
+    $('#ProductsSupportingText').css('max-height','150px');
 
     var BarreHHolder = document.getElementById('BarreHHolder');
     var TransporterVHolder = document.getElementById('TransporterVHolder');
