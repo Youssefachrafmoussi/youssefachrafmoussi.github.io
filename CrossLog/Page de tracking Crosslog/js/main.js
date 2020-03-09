@@ -28,7 +28,7 @@ $(window).resize(function () {
 
   if ($(window).width() < 840) {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
-
+    $('#ProductsSupportingText').css('max-height','');
 
     var BarreHHolder = document.getElementById('BarreHHolder');
     var TransporterVHolder = document.getElementById('TransporterVHolder');
@@ -59,6 +59,7 @@ $(window).resize(function () {
     $('#home-button').css('visibility','hidden');
     $('#truck-button').css('visibility','hidden');
     $('#list-button').css('visibility','hidden');
+    $('#ProductsSupportingText').css('max-height','200px');
 
     var BarreHHolder = document.getElementById('BarreHHolder');
     var TransporterVHolder = document.getElementById('TransporterVHolder');
