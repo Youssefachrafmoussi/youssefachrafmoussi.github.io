@@ -246,8 +246,8 @@ img.article-image {
 }
 
 footer{
-  background-color: #3a4851;
-  color:  #5d8d98;
+  background-color: #3a4851 !important;
+  color:  #5d8d98 !important;
 }
 .footer-container {
   margin: 0 auto;
