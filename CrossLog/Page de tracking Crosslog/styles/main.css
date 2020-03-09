@@ -245,7 +245,10 @@ img.article-image {
   z-index: 900;
 }
 
-
+footer{
+  background-color: #3a4851;
+  color:  #5d8d98;
+}
 .footer-container {
   margin: 0 auto;
 }
