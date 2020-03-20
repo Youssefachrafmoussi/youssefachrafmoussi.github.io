@@ -118,13 +118,15 @@
 }
 
 .description {
-	color: #fff;
+	color: #ff00ff;
 }
 
 .js .description--grid {
-	display: none !important;
+	display: none;
 }
-
+.description--grid {
+	display: none;
+}
 .description--preview {
 	font-size: 2em;
 	position: absolute;
