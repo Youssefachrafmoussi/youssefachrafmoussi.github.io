@@ -13,10 +13,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+/*
 *,
 *:after,
 *:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}*/
+a,
+a:after,
+a:before {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
