@@ -82,7 +82,6 @@ $(window).trigger('resize');
 });
 $(window).on('load', function(){
 var width = document.getElementById('MapHeader').offsetWidth;
-var height = 430;
 if(width<700){
   document.getElementById("iFrameMap").style.height="640px";
   }
