@@ -88,4 +88,11 @@ if(width<700){
 else{
   document.getElementById("iFrameMap").style.height="430px";
     }
+
+if(document.getElementById("iFrameMap").src.includes("Delivery")){
+  document.getElementById("iFrameMap").scrolling='no';
+}
+else{
+  document.getElementById("iFrameMap").scrolling='yes';
+}
 });
