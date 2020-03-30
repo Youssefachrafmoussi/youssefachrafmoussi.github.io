@@ -84,10 +84,9 @@ $(window).on('load', function(){
 var width = document.getElementById('MapHeader').offsetWidth;
 var height = 430;
 if(width<700){
-  height = 640;
+  document.getElementById("iFrameMap").style.height="640px";
   }
 else{
-  height = 430;
+  document.getElementById("iFrameMap").style.height="430px";
     }
-document.getElementById("mapDiv").insertAdjacentHTML('afterend','');
 });
