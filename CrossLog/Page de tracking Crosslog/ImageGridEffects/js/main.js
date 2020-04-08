@@ -228,6 +228,10 @@
 			imagesLoaded(self.originalImg, function() {
 				// close button just gets shown after the large image gets loaded
 				classie.add(self.previewEl, 'preview--image-loaded');
+
+
+				$("[id$='ButtonPreview']").detach().after('#MadeBy');
+
 				// animate the opacity to 1
 				self.originalImg.style.opacity = 1;
 				// and once that's done..
