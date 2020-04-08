@@ -171,8 +171,10 @@
 		if( this.isAnimating || this.isExpanded ) return;
 		this.isAnimating = true;
 		this.isExpanded = true;
+		
 		$("[id$='ButtonPreview']").detach().insertAfter($(".MadeBy"));
-		alert(item.getAttribute('id'));
+		$("[id$='SelectedTemplateId']").val(item.getAttribute('id'));
+
 		// item's image
 		var gridImg = item.querySelector('img'),
 			gridImgOffset = gridImg.getBoundingClientRect();
