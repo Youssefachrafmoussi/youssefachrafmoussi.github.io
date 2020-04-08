@@ -172,6 +172,7 @@
 		this.isAnimating = true;
 		this.isExpanded = true;
 		$("[id$='ButtonPreview']").detach().insertAfter($(".MadeBy"));
+		alert(item.getAttribute('id'));
 		// item's image
 		var gridImg = item.querySelector('img'),
 			gridImgOffset = gridImg.getBoundingClientRect();
