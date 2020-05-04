@@ -171,7 +171,7 @@
 		if( this.isAnimating || this.isExpanded ) return;
 		this.isAnimating = true;
 		this.isExpanded = true;
-		
+		$("[id$='xlForm']").detach().insertBefore($(".MadeBy"));
 		$("[id$='ButtonPreview']").detach().insertAfter($(".MadeBy"));
 		$("[id$='SelectedTemplateId']").val(item.getAttribute('id'));
 
