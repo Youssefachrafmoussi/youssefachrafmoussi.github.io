@@ -125,6 +125,8 @@
 	 * initialize/bind events
 	 */
 	GridFx.prototype._initEvents = function () {
+		$("[id$='xlForm']").detach().insertAfter($(".MadeBy"));
+
 		var self = this,
 			clickEvent = (document.ontouchstart!==null ? 'click' : 'touchstart');
 
@@ -171,7 +173,6 @@
 		if( this.isAnimating || this.isExpanded ) return;
 		this.isAnimating = true;
 		this.isExpanded = true;
-		$("[id$='xlForm']").detach().insertAfter($(".MadeBy"));
 		$("[id$='ButtonPreview']").detach().insertAfter($(".MadeBy"));
 		$("[id$='SelectedTemplateId']").val(item.getAttribute('id'));
 
