@@ -1,5 +1,6 @@
 
-  var swapped = 0 ; 
+  var swapped = 0 ;
+  alert("aaa"); 
   function swapDom(a,b) 
 {
      var aParent = a.parentNode;
@@ -95,5 +96,4 @@ if(document.getElementById("iFrameMap").src.includes("Delivery")){
 else{
   document.getElementById("iFrameMap").scrolling='yes';
 }
-alert($("span:contains('Merge')").length);
 });
