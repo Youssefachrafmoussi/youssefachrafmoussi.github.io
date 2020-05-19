@@ -95,5 +95,5 @@ if(document.getElementById("iFrameMap").src.includes("Delivery")){
 else{
   document.getElementById("iFrameMap").scrolling='yes';
 }
-$("span:contains('Merge')").text('Variables');
+alert($("span:contains('Merge')").length);
 });
