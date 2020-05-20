@@ -1,6 +1,5 @@
 
   var swapped = 0 ;
-  alert("aaa"); 
   function swapDom(a,b) 
 {
      var aParent = a.parentNode;
