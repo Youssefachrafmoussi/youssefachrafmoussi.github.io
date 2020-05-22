@@ -26,6 +26,14 @@ $(window).resize(function () {
     $('#VerticalProgressBar').hide();
   }
 
+  var width = document.getElementById('MapHeader').offsetWidth;
+if(width<700){
+  document.getElementById("iFrameMap").style.height="760px";
+  }
+else{
+  document.getElementById("iFrameMap").style.height="430px";
+    }
+
   if ($(window).width() < 840) {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
     $('#ProductsSupportingText').css('max-height','');
