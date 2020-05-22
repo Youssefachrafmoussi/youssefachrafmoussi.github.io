@@ -27,12 +27,12 @@ $(window).resize(function () {
   }
 
   var width = document.getElementById('MapHeader').offsetWidth;
-if(width<700){
-  document.getElementById("iFrameMap").style.height="760px";
-  }
-else{
-  document.getElementById("iFrameMap").style.height="430px";
+  if(width==618 || width==456){
+    document.getElementById("iFrameMap").style.height="430px";
     }
+  else{
+    document.getElementById("iFrameMap").style.height="760px";
+      }
 
   if ($(window).width() < 840) {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
@@ -90,11 +90,11 @@ $(window).trigger('resize');
 });
 $(window).on('load', function(){
 var width = document.getElementById('MapHeader').offsetWidth;
-if(width<700){
-  document.getElementById("iFrameMap").style.height="760px";
+if(width==618 || width==456){
+  document.getElementById("iFrameMap").style.height="430px";
   }
 else{
-  document.getElementById("iFrameMap").style.height="430px";
+  document.getElementById("iFrameMap").style.height="760px";
     }
 
 if(document.getElementById("iFrameMap").src.includes("Delivery")){
