@@ -83,7 +83,7 @@ $(window).trigger('resize');
 $(window).on('load', function(){
 var width = document.getElementById('MapHeader').offsetWidth;
 if(width<700){
-  document.getElementById("iFrameMap").style.height="640px";
+  document.getElementById("iFrameMap").style.height="760px";
   }
 else{
   document.getElementById("iFrameMap").style.height="430px";
