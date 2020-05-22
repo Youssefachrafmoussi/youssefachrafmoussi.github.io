@@ -27,7 +27,7 @@ $(window).resize(function () {
   }
 
   var width = document.getElementById('MapHeader').offsetWidth;
-  if(width==618 || width==456){
+  if(width==618){
     document.getElementById("iFrameMap").style.height="430px";
     }
   else{
@@ -90,7 +90,7 @@ $(window).trigger('resize');
 });
 $(window).on('load', function(){
 var width = document.getElementById('MapHeader').offsetWidth;
-if(width==618 || width==456){
+if(width==618){
   document.getElementById("iFrameMap").style.height="430px";
   }
 else{
